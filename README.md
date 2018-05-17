@@ -1,6 +1,6 @@
-#My dot files
+# My dot files
 
-##Initial Set Up
+## Initial Set Up
 ```
 git init --bare $HOME/.myconf
 config config status.showUntrackedFiles no
