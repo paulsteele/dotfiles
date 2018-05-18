@@ -18,3 +18,8 @@ rm -rf myconf-tmp
 source .bashrc
 config config status.showUntrackedFiles no
 ```
+
+## External Dependencies
+```
+git clone https://github.com/magicmonty/bash-git-prompt.git
+```
