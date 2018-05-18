@@ -21,5 +21,5 @@ config config status.showUntrackedFiles no
 
 ## External Dependencies
 ```
-git clone https://github.com/magicmonty/.bash-git-prompt.git
+git clone git@github.com:magicmonty/bash-git-prompt.git .bash-git-prompt
 ```
