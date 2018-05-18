@@ -1,0 +1,5 @@
+*
+!.gitignore
+!.config/rofi/
+!.i3/
+!.bashrc
