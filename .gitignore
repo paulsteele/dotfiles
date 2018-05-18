@@ -1,5 +1,14 @@
-*
+/*
+# Repo specific
 !.gitignore
-!.config/rofi/
-!.i3/
+!.README.md
+
+# Root files
 !.bashrc
+
+# .config directory
+!/.config/
+/.config/*
+!/.config/rofi
+#.i3 directory
+!/.i3/
