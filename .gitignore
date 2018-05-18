@@ -10,5 +10,7 @@
 !/.config/
 /.config/*
 !/.config/rofi
+!/.config/feh
+/.config/feh/background.jpeg
 #.i3 directory
 !/.i3/
