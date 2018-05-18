@@ -12,8 +12,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 ## New Machine Set Up
 ```
-git clone --separate-git-dir=$HOME/.myconf /path/to/repo $HOME/myconf-tmp
-mv -R $HOME/myconf-tmp ~
+git clone --separate-git-dir=$HOME/.myconf git@github.com:paulsteele/dotfiles.git $HOME/myconf-tmp
+cp myconf-tmp/* ~
+rm -rf myconf-tmp
 source .bashrc
 config config status.showUntrackedFiles no
 ```
