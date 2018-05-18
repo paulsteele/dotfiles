@@ -3,7 +3,6 @@
 ## Initial Set Up
 ```
 git init --bare $HOME/.myconf
-config config status.showUntrackedFiles no
 ```
 Add alias to `.bashrc`
 ```
@@ -16,7 +15,6 @@ git clone --separate-git-dir=$HOME/.myconf git@github.com:paulsteele/dotfiles.gi
 cp myconf-tmp/* ~
 rm -rf myconf-tmp
 source .bashrc
-config config status.showUntrackedFiles no
 ```
 
 ## External Dependencies
