@@ -31,6 +31,10 @@
     magenta:      #deb887;
     lightmagenta:     #996600;
     //
+    //
+    purple:   #472664;
+    lightpurple: #330F53;
+    //
     // Cyan
     cyan:      #b0c4de;
     lightcyan:     #b0c4de;
@@ -65,14 +69,14 @@
     text-color: @lightgreen;
 }
 #inputbar {
-    background-color: @lightblack;
+    background-color: #47266499;
     text-color: @lightgreen;
     padding: 4px;
     border: 0px 0px 2px 0px;
 }
 #mainbox {
     expand: true;
-    background-color: #1c1c1c99;
+    background-color: #0E071499;
     spacing: 1em;
 }
 #listview {
@@ -81,7 +85,7 @@
     lines: 0;
 }
 #element selected  normal {
-    background-color: @blue;
+    background-color: @lightpurple;
 }
 #element normal active {
     text-color: @lightblue;
