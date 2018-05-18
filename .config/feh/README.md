@@ -1,0 +1,1 @@
+Place image for background in `background.jpeg`
