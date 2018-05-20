@@ -147,7 +147,23 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        colors {
+                background #000000
+                statusline #ffffff
+                separator #ffffff
+
+                focused_workspace  #613489 #542d77 #ffffff
+                active_workspace   #542d77 #3a1f52 #ffffff
+                inactive_workspace #542d77 #3a1f52 #aaaaaa
+                urgent_workspace   #2f343a #900000 #ffffff
+        }
 }
+
+client.focused #542d77 #472664 #ffffff
+client.unfocused #3a1f52 #2d183f #aaaaaa
+client.focused_inactive #3a1f52 #2d183f #aaaaaa
+
+hide_edge_borders both
 
 exec compton -f
 exec_always feh --bg-scale ~/.config/feh/background.jpeg
