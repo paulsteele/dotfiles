@@ -12,6 +12,7 @@
 !/.config/rofi
 !/.config/feh
 !/.config/i3status
+!/.config/terminator
 /.config/feh/background.jpeg
 #.i3 directory
 !/.i3/
