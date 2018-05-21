@@ -18,12 +18,12 @@ source .bashrc
 ```
 
 ## External Dependencies
+### Repos
 ```
-#Git Repos
 git clone git@github.com:magicmonty/bash-git-prompt.git .bash-git-prompt
-#
-Packages
-i3
-rofi
-polybar
 ```
+
+### Packages
+* i3
+* rofi
+* polybar
