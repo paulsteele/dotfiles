@@ -21,7 +21,6 @@ source .bashrc
 ### Repos
 ```
 git clone git@github.com:magicmonty/bash-git-prompt.git .bash-git-prompt
-https://github.com/stark/siji (follow setup instructions)
 ```
 
 ### Packages
