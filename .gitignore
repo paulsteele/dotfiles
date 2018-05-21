@@ -13,6 +13,7 @@
 !/.config/feh
 !/.config/i3status
 !/.config/terminator
+!/.config/polybar
 /.config/feh/background.jpeg
 #.i3 directory
 !/.i3/
