@@ -4,7 +4,9 @@
 !.README.md
 
 # Root files
-!.bashrc
+!.zshrc
+!.zprofile
+!.XResources
 
 # .config directory
 !/.config/
