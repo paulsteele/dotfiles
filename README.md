@@ -27,3 +27,4 @@ git clone git@github.com:magicmonty/bash-git-prompt.git .bash-git-prompt
 * i3
 * rofi
 * polybar
+* adapta-gtk-theme
