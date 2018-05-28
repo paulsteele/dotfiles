@@ -1,0 +1,56 @@
+*foreground: #D0CCD0
+*background: #070B14
+
+!black
+*color0:     #34373E
+*color8:     #070B14
+!red
+*color1:     #FB5A62
+*color9:     #FB3640 
+!green
+*color2:     #9BC9C4
+*color10:    #85BEB8
+!yellow
+*color3:     #FBA55A
+*color11:    #FB8F36
+!blue
+*color4:     #657F96
+*color12:    #43637F
+!magenta
+*color5:     #FB6970
+*color13:    #E5525A
+!cyan
+*color6:     #768DA1
+*color14:    #54718A
+!white
+*color7:     #D8D5D8
+*color15:    #D0CCD0
+
+!################
+!# URXVT settings
+!################
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.loginShell:           true
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+URxvt.fading:				10
+
+URxvt*saveLines: 12000
+
+!URxvt*background: rgba:0000/0000/0200/dd00
+
+!# Monaco Linux font
+URxvt*font: xft:Cousine for Powerline:pixelsize=15
+URxvt*boldFont: xft:Cousine for Powerline:pixelsize=15
+URxvt*letterSpace: -1
+
+!# scrollbar - true (default) or false
+URxvt*scrollBar: true
+
+!# scrollbar position - left=false (default) or right=true
+URxvt*scrollBar_right: true
+
+!# scrollbar style - rxvt (default), plain, next, or xterm
+URxvt*scrollstyle: plain
