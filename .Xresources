@@ -1,12 +1,18 @@
-*foreground: #D0CCD0
-*background: #070B14
+#define FOREGROUND 			#D0CCD0
+#define BACKGROUND 			#070B14
+#define BACKGROUND_LIGHT 	#34373E
+#define URGENT	   			#FB3640
+#define ACTIVE	   			#43637F
 
-!black
-*color0:     #34373E
-*color8:     #070B14
+*foreground: FOREGROUND
+*background: BACKGROUND
+
+!black		 
+*color0:     
+*color8:     BACKGROUND
 !red
 *color1:     #FB5A62
-*color9:     #FB3640 
+*color9:     URGENT
 !green
 *color2:     #9BC9C4
 *color10:    #85BEB8
@@ -15,7 +21,7 @@
 *color11:    #FB8F36
 !blue
 *color4:     #657F96
-*color12:    #43637F
+*color12:    ACTIVE
 !magenta
 *color5:     #FB6970
 *color13:    #E5525A
@@ -24,7 +30,7 @@
 *color14:    #54718A
 !white
 *color7:     #D8D5D8
-*color15:    #D0CCD0
+*color15:    FOREGROUND
 
 !################
 !# URXVT settings
@@ -38,8 +44,6 @@ URxvt.lineSpace:            0
 URxvt.fading:				10
 
 URxvt*saveLines: 12000
-
-!URxvt*background: rgba:0000/0000/0200/dd00
 
 !# Monaco Linux font
 URxvt*font: xft:Cousine for Powerline:pixelsize=15
@@ -59,3 +63,16 @@ URxvt.keysym.Control-Up:	\033[1;5A
 URxvt.keysym.Control-Down:	\033[1;5B
 URxvt.keysym.Control-Left:	\033[1;5D
 URxvt.keysym.Control-Right:	\033[1;5C
+
+!!!!!!!!!!!!!!
+!Rofi settings
+!!!!!!!!!!!!!!
+
+rofi.sidebar-mode: true
+rofi.location: 6
+rofi.width: 30
+rofi.lines: 5
+rofi.color-window: FOREGROUND
+rofi.color-urgent: URGENT
+rofi.color-active: ACTIVE
+rofi.color-normal: FOREGROUND
