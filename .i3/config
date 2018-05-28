@@ -5,6 +5,15 @@
 # this file and re-run i3-config-wizard(1).
 #r
 
+#colors
+set_from_resource $background-focus   i3wm.color12      #000000
+set_from_resource $background-nofocus i3wm.color8     #000000
+set_from_resource $foreground-focus   i3wm.foreground  #FFFFFF
+set_From_resource $foreground-nofocus i3wm.color7      #FFFFFF 
+set_from_resource $accent-focus       i3wm.color12     #CCCCCC
+set_from_resource $accent-nofocus     i3wm.color0     #CCCCCC
+
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -18,7 +27,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:DejaVu Sans Mono 12
+font pango:Cousine for Powerline 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -143,11 +152,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-client.focused #542d77 #472664 #ffffff
-client.unfocused #3a1f52 #2d183f #aaaaaa
-client.focused_inactive #3a1f52 #2d183f #aaaaaa
-
-hide_edge_borders both
+client.focused $accent-focus $background-focus $foreground-focus
+client.unfocused $accent-nofocus $background-nofocus $foreground-nofocus
+client.focused_inactive $accent-nofocus $background-nofocus $foreground-nofocus
 
 exec compton -f
 exec_always feh --bg-scale ~/.config/feh/background.jpeg
