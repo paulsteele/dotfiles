@@ -14,7 +14,7 @@
 [plugins]
 [profiles]
   [[default]]
-    show_titlebar = false
+    allow_bold = False
     cursor_color = "#aaaaaa"
-    font = DejaVu Sans Mono 12
-    use_system_font = False
+    font = Monospace Bold Italic 12
+    show_titlebar = False

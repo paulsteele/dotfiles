@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-bind '"\t":menu-complete'
+#bind '"\t":menu-complete'
 
 #Universal aliases
 alias gdiff="git difftool -y --dir-diff"
