@@ -6,7 +6,7 @@
 # Root files
 !.zshrc
 !.zprofile
-!.XResources
+!.Xresources
 
 # .config directory
 !/.config/
