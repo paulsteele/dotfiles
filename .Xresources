@@ -8,7 +8,7 @@
 *background: BACKGROUND
 
 !black		 
-*color0:     
+*color0:     BACKGROUND_LIGHT
 *color8:     BACKGROUND
 !red
 *color1:     #FB5A62
