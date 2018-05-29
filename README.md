@@ -18,7 +18,8 @@ source .bashrc
 ```
 
 ## External Dependencies
-
+### Repos
+* https://github.com/powerline/fonts
 ### Packages
 * i3
 * rofi
