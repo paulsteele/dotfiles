@@ -18,13 +18,12 @@ source .bashrc
 ```
 
 ## External Dependencies
-### Repos
-```
-git clone git@github.com:magicmonty/bash-git-prompt.git .bash-git-prompt
-```
 
 ### Packages
 * i3
 * rofi
 * polybar
 * adapta-gtk-theme
+* zsh
+* oh-my-zsh
+* powerline-fonts
