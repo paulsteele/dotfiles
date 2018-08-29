@@ -20,6 +20,7 @@ source .bashrc
 ## External Dependencies
 ### Repos
 * https://github.com/powerline/fonts
+* https://github.com/denysdovhan/spaceship-prompt
 ### Packages
 * i3
 * rofi
