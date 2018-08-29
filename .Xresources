@@ -24,10 +24,10 @@
 *color12:    ACTIVE
 !magenta
 *color5:     #457D8A
-*color13:    #5C2751
+*color13:    #843774
 !cyan
 *color6:     #457D8A
-*color14:    #1C6170
+*color14:    #237b8e
 !white
 *color7:     #DCDBE1
 *color15:    FOREGROUND
@@ -46,9 +46,9 @@ URxvt.fading:				10
 URxvt*saveLines: 12000
 
 !# Monaco Linux font
-URxvt*font: xft:Cousine for Powerline:pixelsize=15
-URxvt*boldFont: xft:Cousine for Powerline:pixelsize=15
-URxvt*letterSpace: -1
+URxvt*font: xft:Cousine for Powerline:pixelsize=21; xft:DejaVu Sans:pixelsize=21
+URxvt*boldFont: xft:Cousine for Powerline:pixelsize=21; xft:DejaVu Sans:pixelsize=21
+URxvt*letterSpace: 0
 
 !# scrollbar - true (default) or false
 URxvt*scrollBar: true
