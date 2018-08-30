@@ -9,6 +9,10 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
 
+export SPACESHIP_PROMPT_ADD_NEWLINE=false
+export SPACESHIP_PACKAGE_SYMBOL=" "
+export SPACESHIP_DOCKER_SYMBOL=" "
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
