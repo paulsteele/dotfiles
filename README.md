@@ -19,7 +19,7 @@ source .bashrc
 
 ## External Dependencies
 ### Repos
-* https://github.com/powerline/fonts
+* https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Cousine
 * https://github.com/denysdovhan/spaceship-prompt
 ### Packages
 * i3
