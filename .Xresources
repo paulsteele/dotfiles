@@ -46,8 +46,8 @@ URxvt.fading:				10
 URxvt*saveLines: 12000
 
 !# Monaco Linux font
-URxvt*font: xft:Cousine for Powerline:pixelsize=21; xft:Noto Mono for Powerline:pixelsize=21
-URxvt*boldFont: xft:Cousine for Powerline:pixelsize=21; xft:Noto Mono for Powerline:pixelsize=21
+URxvt*font: xft:Cousine Nerd Font Mono:pixelsize=21;
+URxvt*boldFont: xft:Cousine Nerd Font Mono:pixelsize=21;
 URxvt*letterSpace: 0
 
 !# scrollbar - true (default) or false
