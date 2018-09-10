@@ -5,7 +5,7 @@
 git clone --separate-git-dir=$HOME/.myconf git@github.com:paulsteele/dotfiles.git $HOME/myconf-tmp
 cp -r myconf-tmp/. ~
 rm -rf myconf-tmp
-source .bashrc
+source .zshrc
 ```
 
 ## External Dependencies
