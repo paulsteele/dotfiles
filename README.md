@@ -1,18 +1,9 @@
 # My dot files
 
-## Initial Set Up
-```
-git init --bare $HOME/.myconf
-```
-Add alias to `.bashrc`
-```
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
-```
-
 ## New Machine Set Up
 ```
 git clone --separate-git-dir=$HOME/.myconf git@github.com:paulsteele/dotfiles.git $HOME/myconf-tmp
-cp myconf-tmp/. ~
+cp -r myconf-tmp/. ~
 rm -rf myconf-tmp
 source .bashrc
 ```
@@ -22,10 +13,12 @@ source .bashrc
 * https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Cousine
 * https://github.com/denysdovhan/spaceship-prompt
 ### Packages
+* vim
+* git
 * i3
 * rofi
 * polybar
+* lxappearance
 * adapta-gtk-theme
 * zsh
 * oh-my-zsh
-* powerline-fonts
