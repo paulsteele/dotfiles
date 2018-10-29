@@ -24,3 +24,4 @@ source .zshrc
 * oh-my-zsh
 * uxrvt-unicode
 * compton
+* feh
