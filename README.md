@@ -23,3 +23,4 @@ source .zshrc
 * zsh
 * oh-my-zsh
 * uxrvt-unicode
+* compton
