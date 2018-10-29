@@ -22,3 +22,4 @@ source .zshrc
 * adapta-gtk-theme
 * zsh
 * oh-my-zsh
+* uxrvt-unicode
