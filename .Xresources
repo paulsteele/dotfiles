@@ -35,6 +35,12 @@
 !################
 !# URXVT settings
 !################
+URxvt.perl-ext-common: font-size
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.C-equal: font-size:increase
+URxvt.keysym.C-minus: font-size:decrease
+
 
 URxvt.depth:                32
 URxvt.geometry:             90x30
@@ -46,8 +52,8 @@ URxvt.fading:				10
 URxvt*saveLines: 12000
 
 !# Monaco Linux font
-URxvt*font: xft:Cousine Nerd Font Mono:pixelsize=18;
-URxvt*boldFont: xft:Cousine Nerd Font Mono:pixelsize=18;
+URxvt.font: xft:Cousine Nerd Font Mono:pixelsize=18
+URxvt.boldFont: xft:Cousine Nerd Font Mono:pixelsize=18
 URxvt*letterSpace: 0
 
 !# scrollbar - true (default) or false

@@ -12,6 +12,7 @@ source .zshrc
 ### Repos
 * https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Cousine
 * https://github.com/denysdovhan/spaceship-prompt
+* https://github.com/majutsushi/urxvt-font-size
 ### Packages
 * vim
 * git
