@@ -73,15 +73,3 @@ URxvt.keysym.Control-Right:	\033[1;5C
 URxvt*depth: 32
 URxvt*background: rgba:0700/0b00/1400/f800
 
-!!!!!!!!!!!!!!
-!Rofi settings
-!!!!!!!!!!!!!!
-
-rofi.sidebar-mode: true
-rofi.location: 6
-rofi.width: 30
-rofi.lines: 5
-rofi.color-window: FOREGROUND
-rofi.color-urgent: URGENT
-rofi.color-active: ACTIVE
-rofi.color-normal: FOREGROUND
