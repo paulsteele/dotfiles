@@ -39,7 +39,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec rofi -show run 
+bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -156,6 +156,8 @@ client.focused $accent-focus $background-focus $foreground-focus
 client.unfocused $accent-nofocus $background-nofocus $foreground-nofocus
 client.focused_inactive $accent-nofocus $background-nofocus $foreground-nofocus
 
+
+exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
 exec compton -f
 exec_always feh --bg-scale ~/.config/feh/background-1.png --bg-scale ~/.config/feh/background-2.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
