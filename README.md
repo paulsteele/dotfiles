@@ -26,3 +26,4 @@ source .zshrc
 * uxrvt-unicode
 * compton
 * feh
+* tig
