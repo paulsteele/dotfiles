@@ -13,6 +13,7 @@ source .zshrc
 * https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Cousine
 * https://github.com/denysdovhan/spaceship-prompt
 * https://github.com/majutsushi/urxvt-font-size
+* https://github.com/EliverLara/Nordic
 ### Packages
 * vim
 * git
@@ -20,7 +21,6 @@ source .zshrc
 * rofi
 * polybar
 * lxappearance
-* adapta-gtk-theme
 * zsh
 * oh-my-zsh
 * uxrvt-unicode
