@@ -10,10 +10,10 @@
 ZSH_THEME="spaceship"
 
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
+export SPACESHIP_KUBECONTEXT_SHOW=false
 export SPACESHIP_PACKAGE_SYMBOL=" "
 export SPACESHIP_DOCKER_SYMBOL=" "
 export SPACESHIP_RUBY_SYMBOL=" "
-export SPACESHIP_KUBECONTEXT_SHOW=false
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
