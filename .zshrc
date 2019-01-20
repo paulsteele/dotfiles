@@ -8,7 +8,7 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
-
+# look at https://unicode-table.com for help with missing symbols
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export SPACESHIP_KUBECONTEXT_SHOW=false
 export SPACESHIP_PACKAGE_SYMBOL=" "
