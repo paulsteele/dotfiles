@@ -1,2 +1,3 @@
 bind generic r !git revert %(commit)
 bind generic + !git commit --amend
+set vertical-split = false
