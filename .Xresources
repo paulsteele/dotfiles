@@ -56,6 +56,14 @@ URxvt.font: xft:Cousine Nerd Font Mono:pixelsize=18
 URxvt.boldFont: xft:Cousine Nerd Font Mono:pixelsize=18
 URxvt*letterSpace: 0
 
+!# scrollbar do not auto scroll
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
+
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
 !# scrollbar - true (default) or false
 URxvt*scrollBar: true
 
