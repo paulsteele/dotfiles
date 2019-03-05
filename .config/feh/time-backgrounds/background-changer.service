@@ -1,0 +1,6 @@
+[Unit]
+Description=Background Changer Service
+
+[Service]
+ExecStart=sh %h/.config/feh/time-backgrounds/background-changer.sh
+
