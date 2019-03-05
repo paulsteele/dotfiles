@@ -33,3 +33,7 @@ source .zshrc
 1. Download images from onedrive (personal)
 2. Navigate to `~/.config/feh/timed-backgrounds`
 3. Run `./install.sh`
+=======
+
+# Firefox Help
+set in `about:config` `widget.content.gtk-theme-override = Adapta` if using Adapta-Nokoto
