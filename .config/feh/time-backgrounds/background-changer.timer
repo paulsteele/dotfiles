@@ -2,6 +2,7 @@
 Description=Change Background Every 2 hours
 
 [Timer]
+OnBootSec=0
 OnCalendar=00/2:00
 Persistent=true
 
