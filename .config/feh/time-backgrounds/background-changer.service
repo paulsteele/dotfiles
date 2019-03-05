@@ -2,5 +2,5 @@
 Description=Background Changer Service
 
 [Service]
-ExecStart=sh %h/.config/feh/time-backgrounds/background-changer.sh
+ExecStart=/bin/bash %h/.config/feh/time-backgrounds/background-changer.sh
 
