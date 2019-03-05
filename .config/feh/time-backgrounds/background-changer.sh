@@ -6,4 +6,7 @@ hour="$(($hour / 2 * 2))"
 
 file="$hour-$(($hour + 2)).png"
 
-~/.local/bin/wal -i ~/.config/feh/time-backgrounds/backgrounds/$file
+filepath=~/.config/feh/time-backgrounds/backgrounds/$file
+
+~/.local/bin/wal -i $filepath -n
+/usr/bin/feh --bg-scale $filepath
