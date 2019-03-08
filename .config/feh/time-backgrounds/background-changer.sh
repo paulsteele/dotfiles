@@ -9,4 +9,4 @@ file="$hour-$(($hour + 2)).png"
 filepath=~/.config/feh/time-backgrounds/backgrounds/$file
 
 ~/.local/bin/wal -i $filepath -n
-/usr/bin/feh --bg-scale $filepath
+/usr/bin/feh --bg-fill $filepath
