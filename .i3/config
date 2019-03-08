@@ -6,11 +6,11 @@
 #r
 
 #colors
-set_from_resource $background-focus   i3wm.color4      #000000
+set_from_resource $background-focus   i3wm.color1      #000000
 set_from_resource $background-nofocus i3wm.color0       #000000
 set_from_resource $foreground-focus   i3wm.foreground  #FFFFFF
 set_From_resource $foreground-nofocus i3wm.color7      #FFFFFF 
-set_from_resource $accent-focus       i3wm.color6     #CCCCCC
+set_from_resource $accent-focus       i3wm.color2     #CCCCCC
 set_from_resource $accent-nofocus     i3wm.color0     #CCCCCC
 
 
