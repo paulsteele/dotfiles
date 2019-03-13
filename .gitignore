@@ -8,6 +8,7 @@
 !.zprofile
 !.Xresources
 !.tigrc
+!.xinitrc
 
 # .config directory
 !/.config/
