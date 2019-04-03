@@ -159,5 +159,5 @@ client.focused_inactive $accent-nofocus $background-nofocus $foreground-nofocus
 
 exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
 exec compton -f
-exec systemctl --user start background-changer.service
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec $HOME/.config/feh/time-backgrounds/background-changer.sh
