@@ -1,3 +1,8 @@
-bind generic r !git revert %(commit)
+bind generic r refresh
+bind generic R !git revert %(commit)
+bind generic <Ctrl-R> !git rebase -i %(commit)^
 bind generic + !git commit --amend
+bind generic D !git diff %(commit)
+
 set vertical-split = false
+
