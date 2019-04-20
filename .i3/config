@@ -27,7 +27,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:Cousine for Powerline 12
+font pango:Cousine Nerd Font Mono 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -119,6 +119,12 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# gaps config
+
+for_window [class=".*"] border pixel 3
+gaps inner 20
+gaps outer 0
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -155,7 +161,6 @@ bindsym $mod+r mode "resize"
 client.focused $accent-focus $background-focus $foreground-focus
 client.unfocused $accent-nofocus $background-nofocus $foreground-nofocus
 client.focused_inactive $accent-nofocus $background-nofocus $foreground-nofocus
-
 
 exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
 exec compton -f
