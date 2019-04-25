@@ -109,7 +109,7 @@ bar-used-fill = ─
 bar-used-indicator = |
 bar-used-empty = ─
 
-label-mounted = %percentage_free%%
+label-mounted = %percentage_used%%
 # label-unmounted = %mountpoint% not mounted
 # label-unmounted-foreground = ${colors.foreground-alt}
 
