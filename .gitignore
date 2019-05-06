@@ -20,6 +20,7 @@
 !/.config/polybar
 !/.config/xrdp
 !/.config/firefox
+!/.config/dunst
 /.config/feh/background.jpeg
 /.config/feh/background-1.png
 /.config/feh/background-2.png
