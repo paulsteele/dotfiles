@@ -162,7 +162,7 @@ client.focused $accent-focus $background-focus $foreground-focus
 client.unfocused $accent-nofocus $background-nofocus $foreground-nofocus
 client.focused_inactive $accent-nofocus $background-nofocus $foreground-nofocus
 
-exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
+exec dunst -config $HOME/.config/dunst/dunstrc
 exec compton -f
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec $HOME/.config/feh/time-backgrounds/background-changer.sh
