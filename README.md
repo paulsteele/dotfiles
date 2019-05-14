@@ -29,7 +29,7 @@ source .zshrc
 * tig
 * pywal (pip3 install pywal --user)
 
-### Setting up bacgkround
+### Setting up backgrounds
 1. Download images from onedrive (personal)
 2. Navigate to `~/.config/feh/timed-backgrounds`
 3. Run `./install.sh`
