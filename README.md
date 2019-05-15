@@ -13,6 +13,7 @@ source .zshrc
 * https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Cousine
 * https://github.com/denysdovhan/spaceship-prompt
 * https://github.com/majutsushi/urxvt-font-size
+* https://github.com/junegunn/vim-plug
 ### Packages
 * vim
 * git
@@ -28,8 +29,9 @@ source .zshrc
 * feh
 * tig
 * pywal (pip3 install pywal --user)
+* neovim
 
-### Setting up bacgkround
+### Setting up backgrounds
 1. Download images from onedrive (personal)
 2. Navigate to `~/.config/feh/timed-backgrounds`
 3. Run `./install.sh`
