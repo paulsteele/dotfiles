@@ -35,6 +35,10 @@ source .zshrc
 1. Download images from onedrive (personal)
 2. Navigate to `~/.config/feh/timed-backgrounds`
 3. Run `./install.sh`
+
+### Setting up neovim
+1. Install vim-plug `curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 =======
 
 # Firefox Help
