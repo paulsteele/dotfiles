@@ -68,6 +68,9 @@ export SPACESHIP_NODE_SYMBOL="◈ "
 plugins=(
   git
   kubectl
+  aws
+  encode64
+  sudo
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -77,7 +80,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+export EDITOR='nvim'
 
 #Universal Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
