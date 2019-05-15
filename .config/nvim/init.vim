@@ -6,7 +6,7 @@ set updatetime=100
 set list listchars=tab:→\ ,trail:·
 set spell spelllang=en_us
 
-call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
