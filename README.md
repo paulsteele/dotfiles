@@ -37,9 +37,7 @@ source .zshrc
 3. Run `./install.sh`
 
 ### Setting up neovim
-1. Install vim-plug `curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-=======
+1. Install vim-plug `curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 
 # Firefox Help
 set in `about:config` `widget.content.gtk-theme-override = Adapta` if using Adapta-Nokoto
