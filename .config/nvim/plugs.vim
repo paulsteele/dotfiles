@@ -5,4 +5,5 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
   Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+  Plug 'manasthakur/vim-commentor'
 call plug#end()
