@@ -19,9 +19,13 @@ let g:lightline = {
 \   'linter_errors': 'error',
 \   'linter_ok': 'ok',
 \ },
-\ 'seperator': { 
-\   'left': "\uE0B0", 
-\   'right': "\uE0B2" 
+\ 'separator': {
+\   'left': "\uE0B0",
+\   'right': "\uE0B2"
+\ },
+\ 'subseparator': {
+\   'left': "|",
+\   'right': "|"
 \ }
 \ }
 
@@ -29,6 +33,3 @@ let g:lightline#ale#indicator_checking = "\uf110"
 let g:lightline#ale#indicator_warnings = "\uf071"
 let g:lightline#ale#indicator_errors = "\uf05e"
 let g:lightline#ale#indicator_ok = "\uf00c"
-
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
