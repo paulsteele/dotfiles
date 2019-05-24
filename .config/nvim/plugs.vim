@@ -9,4 +9,5 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'maximbaz/lightline-ale'
   Plug 'tpope/vim-fugitive'
+  Plug 'leafgarland/typescript-vim'
 call plug#end()
