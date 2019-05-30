@@ -11,7 +11,7 @@ nmap <leader>, :BLines<cr>
 " fuzzy find an open buffer
 nmap <leader>b :Buffers<cr>
 " fuzzy find text in working directory
-nmap <leader>r :Rg
+nmap <leader>r :Rg<cr>
 " fuzzy find neo vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
 nmap <leader>c :Commands<cr>
 
