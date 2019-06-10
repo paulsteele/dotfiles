@@ -31,6 +31,12 @@ source .zshrc
 * pywal (pip3 install pywal --user)
 * neovim
 
+### Linters
+* https://github.com/amperser/proselint/
+* https://github.com/koalaman/shellcheck
+* http://www.mypy-lang.org/
+
+
 ### Setting up backgrounds
 1. Download images from onedrive (personal)
 2. Navigate to `~/.config/feh/timed-backgrounds`
