@@ -1,8 +1,8 @@
 set number
 set relativenumber
-set expandtab
-set tabstop=2
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set updatetime=100
 set list listchars=tab:→\ ,trail:·
 set noshowmode
-"set spell spelllang=en_us
+hi SpellBad cterm=underline
+set spell spelllang=en_us
