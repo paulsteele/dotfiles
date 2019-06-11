@@ -1,11 +1,20 @@
 let g:lightline = { 
 \ 'active': {
-\   'left': [ [ 'mode', 'paste' ],
-\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-\   'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ], ['lineinfo' ], [ 'percent' ], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+\   'left': [
+\             [ 'mode', 'paste' ],
+\             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
+\             [ 'cocstatus' ]
+\           ],
+\   'right': [
+\              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+\              ['lineinfo' ],
+\              [ 'percent' ],
+\              [ 'filetype' ]
+\            ]
 \ },
 \ 'component_function': {
-\   'gitbranch': 'fugitive#head'
+\   'gitbranch': 'fugitive#head',
+\   'cocstatus': 'coc#status'
 \ },
 \ 'component_expand': {
 \   'linter_checking': 'lightline#ale#checking',
