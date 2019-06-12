@@ -1,5 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-  Plug 'scrooloose/nerdtree'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'airblade/vim-gitgutter'
@@ -10,4 +9,5 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'maximbaz/lightline-ale'
   Plug 'tpope/vim-fugitive'
   Plug 'leafgarland/typescript-vim'
+  Plug 'kamykn/spelunker.vim'
 call plug#end()

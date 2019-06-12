@@ -1,6 +1,7 @@
 shellcheck
 AWS
-AWS
 NetApp
 netapp
 jenkins
+dryrun
+linter
