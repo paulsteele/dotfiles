@@ -15,7 +15,6 @@ source .zshrc
 * https://github.com/majutsushi/urxvt-font-size
 * https://github.com/junegunn/vim-plug
 ### Packages
-* vim
 * git
 * i3
 * rofi
@@ -30,6 +29,7 @@ source .zshrc
 * tig
 * pywal (pip3 install pywal --user)
 * neovim
+* ripgrep
 
 ### Linters
 * https://github.com/amperser/proselint/
