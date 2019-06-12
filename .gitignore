@@ -29,5 +29,7 @@
 /.config/feh/time-backgrounds/backgrounds/*
 /.config/nvim/autoload
 /.config/nvim/plugged
+/.config/nvim/.netrwhist
+/.conifg/nvim/spell/*.spl
 #.i3 directory
 !/.i3/

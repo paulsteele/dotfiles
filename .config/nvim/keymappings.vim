@@ -15,4 +15,4 @@ nmap <leader>r :Rg<cr>
 " fuzzy find neo vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
 nmap <leader>c :Commands<cr>
 
-nmap <C-e> :NERDTreeToggle<CR>
+nmap <C-e> :Lexplore<CR>
