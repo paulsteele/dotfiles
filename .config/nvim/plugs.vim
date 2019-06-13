@@ -8,6 +8,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'maximbaz/lightline-ale'
   Plug 'tpope/vim-fugitive'
-  Plug 'leafgarland/typescript-vim'
   Plug 'kamykn/spelunker.vim'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-tslint-plugin', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
