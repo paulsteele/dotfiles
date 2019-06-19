@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'kamykn/spelunker.vim'
   Plug 'leafgarland/typescript-vim'
+  Plug 'tpope/vim-surround'
   Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}

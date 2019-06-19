@@ -17,3 +17,8 @@ timedelta
 pylint
 timestamp
 args
+hostname
+languageserver
+filetypes
+Symfony
+configs

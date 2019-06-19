@@ -1,5 +1,15 @@
 {
   "diagnostic.displayByAle": true,
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "languageserver": {
+    "intelephense": {
+      "command": "intelephense",
+      "args": ["--stdio"],
+      "filetypes": ["php"],
+      "initializationOptions": {
+        "storagePath": "/tmp/intelephense"
+      }
+    }
+  }
 }
 
