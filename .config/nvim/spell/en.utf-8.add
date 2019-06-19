@@ -22,3 +22,5 @@ languageserver
 filetypes
 Symfony
 configs
+args
+goaccess
