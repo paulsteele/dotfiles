@@ -10,6 +10,7 @@
         "storagePath": "/tmp/intelephense"
       }
     }
-  }
+  },
+  "java.jdt.ls.vmargs": "-Xmx3072m -server -XX:+DoEscapeAnalysis -XX:+UseCompressedOops -XX:-UseSplitVerifier -Xverify:none"
 }
 

@@ -24,3 +24,6 @@ Symfony
 configs
 args
 goaccess
+newrelic
+openssl
+namedtuple
