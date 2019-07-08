@@ -1,6 +1,0 @@
-[Unit]
-Description=Background Changer Service
-
-[Service]
-ExecStart=/bin/bash %h/.config/feh/time-backgrounds/background-changer.sh
-

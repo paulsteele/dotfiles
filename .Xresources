@@ -1,36 +1,42 @@
-#define FOREGROUND 			#DCDBE1
-#define BACKGROUND 			#717175
-#define BACKGROUND_LIGHT 		#1F1F20
-#define URGENT	   			#FB3640
-#define ACTIVE	   			#274480
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
 
-*foreground: FOREGROUND
-*background: BACKGROUND
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
 
-!black		 
-*color0:     BACKGROUND_LIGHT
-*color8:     BACKGROUND
-!red
-*color1:     #FB5A62
-*color9:     URGENT
-!green
-*color2:     #9BC9C4
-*color10:    #85BEB8
-!yellow
-*color3:     #E4572E
-*color11:    #E66641
-!blue
-*color4:     #4E6697
-*color12:    ACTIVE
-!magenta
-*color5:     #457D8A
-*color13:    #843774
-!cyan
-*color6:     #457D8A
-*color14:    #237b8e
-!white
-*color7:     #DCDBE1
-*color15:    FOREGROUND
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
 
 !################
 !# URXVT settings
