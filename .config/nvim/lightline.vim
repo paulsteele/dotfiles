@@ -35,7 +35,8 @@ let g:lightline = {
 \ 'subseparator': {
 \   'left': "|",
 \   'right': "|"
-\ }
+\ },
+\ 'colorscheme': 'nord'
 \ }
 
 let g:lightline#ale#indicator_checking = "\uf110"
