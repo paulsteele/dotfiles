@@ -6,12 +6,12 @@
 #r
 
 #colors
-set_from_resource $background-focus   i3wm.background      #000000
-set_from_resource $background-nofocus i3wm.color8       #000000
+set_from_resource $background-focus   i3wm.color8      #000000
+set_from_resource $background-nofocus i3wm.color0       #000000
 set_from_resource $foreground-focus   i3wm.foreground  #FFFFFF
-set_From_resource $foreground-nofocus i3wm.color4      #FFFFFF 
-set_from_resource $accent-focus       i3wm.color6     #CCCCCC
-set_from_resource $accent-nofocus     i3wm.color12     #CCCCCC
+set_From_resource $foreground-nofocus i3wm.color7      #FFFFFF 
+set_from_resource $accent-focus       i3wm.color8     #CCCCCC
+set_from_resource $accent-nofocus     i3wm.color0   #CCCCCC
 
 
 # i3 config file (v4)
