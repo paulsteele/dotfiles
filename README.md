@@ -27,7 +27,6 @@ source .zshrc
 * compton
 * feh
 * tig
-* pywal (pip3 install pywal --user)
 * neovim
 * ripgrep
 
@@ -35,12 +34,6 @@ source .zshrc
 * https://github.com/amperser/proselint/
 * https://github.com/koalaman/shellcheck
 * http://www.mypy-lang.org/
-
-
-### Setting up backgrounds
-1. Download images from onedrive (personal)
-2. Navigate to `~/.config/feh/timed-backgrounds`
-3. Run `./install.sh`
 
 ### Setting up neovim
 1. Install vim-plug `curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`

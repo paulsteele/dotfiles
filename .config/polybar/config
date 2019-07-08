@@ -8,15 +8,15 @@
 ;=====================================================
 
 [colors]
-background = ${xrdb:color1:#222}
-background-alt = ${xrdb:color2:#222}
+background = ${xrdb:color0:#222}
+background-alt = ${xrdb:color8:#222}
 foreground = ${xrdb:color15:#dfdfdf}
-foreground-alt = ${xrdb:color15:#555}
-primary = ${xrdb:color2:3888}
-secondary = ${xrdb:color3:#777}
-alert = ${xrdb:color5:#f00}
-green = ${xrdb:color6:0f0}
-yellow = ${xrdb:color7:ff0}
+foreground-alt = ${xrdb:color7:#555}
+primary = ${xrdb:color14:3888}
+secondary = ${xrdb:color6:#777}
+alert = ${xrdb:color9:#f00}
+green = ${xrdb:color10:0f0}
+yellow = ${xrdb:color11:ff0}
 
 [bar/base]
 monitor = ${env:MONITOR}

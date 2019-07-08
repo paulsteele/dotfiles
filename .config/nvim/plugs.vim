@@ -12,9 +12,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'tpope/vim-surround'
   Plug 'vmchale/dhall-vim'
+  Plug 'arcticicestudio/nord-vim'
   Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-tslint-plugin', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
+
+colorscheme nord
