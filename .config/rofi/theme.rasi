@@ -1,27 +1,27 @@
 * {
-	base00: #263238;
-	base01: #2E3C43;
-	base02: #314549;
-	base03: #546E7A;
-	base04: #B2CCD6;
-	base05: #EEFFFF;
-	base06: #EEFFFF;
-	base07: #FFFFFF;
-	base08: #F07178;
-	base09: #F78C6C;
-	base0A: #FFCB6B;
-	base0B: #C3E88D;
-	base0C: #89DDFF;
-	base0D: #82AAFF;
-	base0E: #C792EA;
-	base0F: #FF5370;
+	base00: #2E3440;
+	base01: #3B4252;
+	base02: #424C5E;
+	base03: #4C566A;
+	base04: #D8DEE9;
+	base05: #E5E9F0;
+	base06: #ECEFF4;
+	base07: #8FBCBB;
+	base08: #88C0D0;
+	base09: #81A1C1;
+	base0A: #5E81AC;
+	base0B: #BF616A;
+	base0C: #D08770;
+	base0D: #EBCB8B;
+	base0E: #A3BE8C;
+	base0F: #B48EAD;
 
 	/*base0D: #00BCD4;*/
 
 	spacing: 0;
 	background-color: transparent;
 
-	font: "Cousine Nerd Font Mono 20";
+	font: "Cousine Nerd Font Mono 16";
 }
 
 window {
@@ -30,7 +30,7 @@ window {
         location: center;
         anchor: center;
 	
-	background-color: #263238CC; /*base00 + CC (60% opacity)*/
+	background-color: #2E3440CC; /*base00 + CC (60% opacity)*/
 }
 
 mainbox {
@@ -46,18 +46,18 @@ inputbar {
 }
 
 prompt {
-	text-color: @base0D;
+	text-color: @base09;
 }
 
 textbox-prompt-colon {
 	expand: false;
 	str: ":";
 	margin: 0 1ch 0 0;
-	text-color: @base0D;
+	text-color: @base09;
 }
 
 entry {
-	text-color: @base07;
+	text-color: @base04;
 }
 
 case-indicator {
@@ -66,17 +66,17 @@ case-indicator {
 
 sidebar, message {
 	border: 1px 0;
-	border-color: @base0D;
+	border-color: @base09;
 }
 
 button, textbox {
 	background-color: @base03;
-	text-color: @base07;
+	text-color: @base04;
 	padding: 5px;
 }
 
 button selected {
-	background-color: @base0D;
+	background-color: @base09;
 }
 
 listview {
@@ -86,10 +86,10 @@ listview {
 
 scrollbar {
 	background-color: @base03;
-	handle-color: @base0D;
+	handle-color: @base09;
 	handle-width: 10px;
 	border: 0 1px;
-	border-color: @base0D;
+	border-color: @base09;
 	margin: 0 0 0 20px;
 }
 
@@ -103,7 +103,7 @@ element normal {
 }
 
 element selected {
-	background-color: @base0D;
+	background-color: @base01;
 }
 
 element alternate {
@@ -111,7 +111,7 @@ element alternate {
 }
 
 element normal normal, element selected normal, element alternate normal {
-	text-color: @base07;
+	text-color: @base04;
 }
 
 element normal urgent, element selected urgent, element alternate urgent {
