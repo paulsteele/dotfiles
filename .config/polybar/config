@@ -8,12 +8,12 @@
 ;=====================================================
 
 [colors]
-background = ${xrdb:color0:#222}
-background-alt = ${xrdb:color8:#222}
-foreground = ${xrdb:color15:#dfdfdf}
+background = ${xrdb:background:#222}
+background-alt = ${xrdb:color0:#222}
+foreground = ${xrdb:foreground:#dfdfdf}
 foreground-alt = ${xrdb:color7:#555}
-primary = ${xrdb:color14:3888}
-secondary = ${xrdb:color6:#777}
+primary = ${xrdb:color6:3888}
+secondary = ${xrdb:color11:#777}
 alert = ${xrdb:color9:#f00}
 green = ${xrdb:color10:0f0}
 yellow = ${xrdb:color11:ff0}
