@@ -18,8 +18,7 @@
 *.foreground:   nord4
 *.background:   #1b1f26
 *.cursorColor:  nord4
-*fading: 45
-*fadeColor: nord0
+*fadeColor: nord4
 
 *.color0: nord1
 *.color1: nord11
