@@ -5,6 +5,9 @@ noremap h ;
 noremap <C-w>l <C-w>h
 noremap <C-w>; <C-w>l
 
+noremap <C-j> <C-f>
+noremap <C-k> <C-b>
+
 let mapleader = ","
 
 " fuzzy find files in the working directory (where you launched Vim from)
