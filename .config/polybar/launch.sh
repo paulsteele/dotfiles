@@ -7,8 +7,8 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch polybar
-DISPLAY1="$(xrandr -q | grep 'eDP1\|VGA-1\|rdp2\|HDMI2' | cut -d ' ' -f1)"
-DISPLAY2="$(xrandr -q | grep 'HDMI1\|VGA-2\|rdp1' | cut -d ' ' -f1)"
+DISPLAY1="$(xrandr -q | grep 'eDP1\|VGA-1\|rdp2\|HDMI2\|Virtual1' | cut -d ' ' -f1)"
+DISPLAY2="$(xrandr -q | grep 'HDMI1\|VGA-2\|rdp1\|Virtual2' | cut -d ' ' -f1)"
 DISPLAY3="$(xrandr -q | grep 'rdp0' | cut -d ' ' -f1)"
 
 if [[ ! -z "$DISPLAY1" ]]; then     
