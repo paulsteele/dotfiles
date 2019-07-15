@@ -18,7 +18,6 @@
 !/.config/i3status
 !/.config/terminator
 !/.config/polybar
-!/.config/xrdp
 !/.config/firefox
 !/.config/dunst
 !/.config/nvim
