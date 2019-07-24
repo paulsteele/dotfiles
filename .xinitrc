@@ -22,6 +22,8 @@ fi
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
+# source .profile
+[[ -f ~/.profile ]] && . ~/.profile
 
 # start some nice programs
 
