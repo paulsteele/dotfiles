@@ -294,7 +294,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 format-underline = ${colors.primary}
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = AC1
 full-at = 98
 
