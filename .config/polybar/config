@@ -298,11 +298,11 @@ battery = BAT0
 adapter = AC1
 full-at = 98
 
-format-charging = BATT <bar-capacity> <label-charging>
+format-charging = BAT <bar-capacity> <label-charging>
 format-charging-underline = ${colors.primary}
 label-charging = %percentage%%
 
-format-discharging = BATT <bar-capacity> <label-discharging>
+format-discharging = BAT <bar-capacity> <label-discharging>
 format-discharging-underline = ${colors.primary}
 label-discharging = %percentage%%
 
