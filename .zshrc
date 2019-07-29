@@ -82,7 +82,7 @@ fi
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
 # Use ripgrep for fzf
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smartcase'
 
 #Universal Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
