@@ -11,7 +11,7 @@ noremap <C-k> <C-b>
 let mapleader = ","
 
 " fuzzy find files in the working directory (where you launched Vim from)
-nmap <leader>f :Files<cr> 
+nmap <leader>f :Files<cr>
 " fuzzy find lines in the current file
 nmap <leader>, :BLines<cr>
 " fuzzy find an open buffer
