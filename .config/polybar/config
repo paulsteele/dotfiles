@@ -50,7 +50,7 @@ font-3 = siji:pixelsize=10;1
 inherit = bar/base
 modules-left = i3
 modules-right = battery volume network date
-
+;
 tray-position = right
 tray-padding = 2
 
@@ -118,7 +118,7 @@ type = internal/i3
 format = <label-state><label-mode>
 index-sort = true
 wrapping-scroll = false
-
+;
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
@@ -297,7 +297,7 @@ type = internal/battery
 battery = BAT0
 adapter = AC1
 full-at = 98
-
+;
 format-charging = BAT <bar-capacity> <label-charging>
 format-charging-underline = ${colors.primary}
 label-charging = %percentage%%
