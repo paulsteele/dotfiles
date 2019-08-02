@@ -42,15 +42,15 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Cousine Nerd Font Mono:pixelsize=12:antialias=true;3"
-font-1 = fixed:pixelsize=10;1
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = siji:pixelsize=10;1
+font-1 = "Cousine Nerd Font Mono:pixelsize=18:antialias=true;2"
+font-2 = "Cousine Nerd Font Mono:pixelsize=24:antialias=true;5"
+font-3 = fixed:pixelsize=10;1
 
 [bar/bottom]
 inherit = bar/base
-modules-left = xkeyboard i3
-modules-right = battery volume network date
-;
+modules-left = i3 xkeyboard 
+modules-right = battery volume virtnetwork network date
+
 tray-position = right
 tray-padding = 2
 
@@ -75,15 +75,9 @@ label = %title:0:100:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
+format = <label-indicator>
+format-background = ${colors.background-alt}
+label-indicator-padding = 1
 
 [module/filesystem]
 type = internal/fs
@@ -151,8 +145,8 @@ format = CPU <ramp-coreload> <label>
 
 label = %percentage%%
 
-; Spacing between individual per-core ramps
 ramp-coreload-spacing = 1
+ramp-coreload-font = 1
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
 ramp-coreload-2 = ▃
@@ -183,28 +177,6 @@ bar-used-fill = ─
 bar-used-indicator = |
 bar-used-empty = ─
 
-[module/wlan]
-type = internal/network
-interface = wlp4s0
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-
 [module/eth]
 type = internal/network
 interface = eth0
@@ -221,6 +193,16 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+[module/virtnetwork]
+type = internal/network
+interface = enp0s3
+interval = 3.0
+
+format-connected = <label-connected>
+format-disconnected = 
+
+label-connected = %{T3}%{T-} %upspeed% %{T3}%{T-} %downspeed%
+
 [module/date]
 type = internal/date
 interval = 5
@@ -231,7 +213,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-label =  %date% %time%
+label = %{T2}%{T-}%date% %time%
 
 [module/volume]
 type = internal/volume
@@ -267,8 +249,8 @@ format-underline = ${colors.primary}
 type = internal/battery
 battery = BAT0
 adapter = AC1
-full-at = 98
-format-charging =  <label-charging>
+full-at = 95
+format-charging = <ramp-capacity> <label-charging>
 label-charging = %percentage%%
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
@@ -285,8 +267,7 @@ ramp-capacity-5 = 
 ramp-capacity-6 = 
 ramp-capacity-7 = 
 ramp-capacity-8 = 
-
-format-full-underline = ${colors.primary}
+ramp-capacity-9 = 
 
 [module/powermenu]
 type = custom/menu
@@ -295,6 +276,7 @@ format-spacing = 1
 
 label-open = 
 label-open-foreground = ${colors.secondary}
+label-open-font = 1
 label-close = cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
