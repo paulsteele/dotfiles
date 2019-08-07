@@ -49,7 +49,7 @@ font-3 = fixed:pixelsize=10;1
 [bar/bottom]
 inherit = bar/base
 modules-left = i3 xkeyboard 
-modules-right = battery volume virtnetwork network date
+modules-right = battery volume virtnetwork network packages date
 
 tray-position = right
 tray-padding = 2
@@ -219,7 +219,13 @@ interval = 3.0
 format-connected = <label-connected>
 format-disconnected = 
 
-label-connected = %{T3}%{T-} %upspeed% %{T3}%{T-} %downspeed%
+label-connected =  %upspeed% %{T3}%{T-} %downspeed% %{T3}%{T-}
+
+[module/packages]
+type = custom/script
+exec = ~/.config/polybar/scripts/get-update-number.sh
+label = %output% %{T3}%{T-}
+interval = 3600
 
 [module/date]
 type = internal/date
@@ -231,7 +237,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-label = %{T2}%{T-}%date% %time%
+label = %{T2}%{T-} %date% %time%
 
 [module/volume]
 type = internal/volume
@@ -268,12 +274,12 @@ type = internal/battery
 battery = BAT0
 adapter = AC1
 full-at = 95
-format-charging = <ramp-capacity> <label-charging>
+format-charging =  <label-charging> <ramp-capacity>
 label-charging = %percentage%%
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <label-discharging> <ramp-capacity>
 label-discharging = %percentage%%
 
-format-full =  <label-full>
+format-full = <label-full> 
 label-full = %percentage%%
 
 ramp-capacity-0 = 
