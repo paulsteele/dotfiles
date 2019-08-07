@@ -232,12 +232,12 @@ type = internal/date
 interval = 5
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = "%Y-%m-%d "
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-label = %{T2}%{T-} %date% %time%
+label = %{T2}%{T-} %date%%time%
 
 [module/volume]
 type = internal/volume
@@ -279,19 +279,29 @@ label-charging = %percentage%%
 format-discharging = <label-discharging> <ramp-capacity>
 label-discharging = %percentage%%
 
-format-full = <label-full> 
+format-full = <label-full> %{T3}%{T-}
 label-full = %percentage%%
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-5 = 
-ramp-capacity-6 = 
-ramp-capacity-7 = 
-ramp-capacity-8 = 
-ramp-capacity-9 = 
+
+;ramp-capacity-0 = 
+;ramp-capacity-1 = 
+;ramp-capacity-2 = 
+;ramp-capacity-3 = 
+;ramp-capacity-4 = 
+;ramp-capacity-5 = 
+;ramp-capacity-6 = 
+;ramp-capacity-7 = 
+;ramp-capacity-8 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-font = 3
 
 [module/powermenu]
 type = custom/menu
