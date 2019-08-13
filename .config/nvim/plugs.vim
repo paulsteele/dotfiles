@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'airblade/vim-gitgutter'
-  Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+  Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
   Plug 'manasthakur/vim-commentor'
   Plug 'w0rp/ale'
   Plug 'itchyny/lightline.vim'
