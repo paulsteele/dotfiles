@@ -38,3 +38,11 @@ standups
 JIRA
 jira
 apis
+kubernetes
+kube
+namespaced
+chartmuseum
+simplejson
+kubectl
+workdir
+entrypoint
