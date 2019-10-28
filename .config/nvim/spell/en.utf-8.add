@@ -46,3 +46,5 @@ simplejson
 kubectl
 workdir
 entrypoint
+teyler
+ffmpeg
