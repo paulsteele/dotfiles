@@ -16,6 +16,7 @@ export SPACESHIP_DOCKER_SYMBOL=" "
 export SPACESHIP_RUBY_SYMBOL=" "
 export SPACESHIP_NODE_SYMBOL="◈ "
 export SPACESHIP_AWS_SYMBOL=" "
+export SPACESHIP_GOLANG_SYMBOL=" "
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
