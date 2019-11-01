@@ -10,13 +10,13 @@
 ZSH_THEME="spaceship"
 # look at https://unicode-table.com for help with missing symbols
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
-export SPACESHIP_KUBECONTEXT_SHOW=false
-export SPACESHIP_PACKAGE_SYMBOL=" "
+export SPACESHIP_PACKAGE_SYMBOL=" "
 export SPACESHIP_DOCKER_SYMBOL=" "
 export SPACESHIP_RUBY_SYMBOL=" "
-export SPACESHIP_NODE_SYMBOL="◈ "
+export SPACESHIP_NODE_SYMBOL=" "
 export SPACESHIP_AWS_SYMBOL=" "
 export SPACESHIP_GOLANG_SYMBOL=" "
+export SPACESHIP_KUBECONTEXT_SYMBOL=" "
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
