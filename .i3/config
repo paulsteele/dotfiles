@@ -166,6 +166,7 @@ client.unfocused $accent-nofocus $background-nofocus $foreground-nofocus
 client.focused_inactive $accent-nofocus $background-nofocus $foreground-nofocus
 
 exec dunst -config $HOME/.config/dunst/dunstrc
-#exec compton -f
+exec nm-applet
+
 exec_always feh --bg-scale ~/.config/feh/background-1.jpg --bg-scale ~/.config/feh/background-2.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
