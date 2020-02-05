@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'amiralies/coc-elixir', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 colorscheme nord
