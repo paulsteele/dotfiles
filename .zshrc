@@ -72,6 +72,7 @@ plugins=(
   aws
   encode64
   sudo
+  asdf
 )
 
 source $ZSH/oh-my-zsh.sh
