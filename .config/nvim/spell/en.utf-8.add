@@ -51,3 +51,5 @@ ffmpeg
 runbook
 metadata
 envs
+configmap
+namespace
