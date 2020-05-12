@@ -22,6 +22,9 @@
 !/.config/firefox
 !/.config/dunst
 !/.config/nvim
+!/.config/yabai
+!/.config/skhd
+!/.config/spacebar
 /.config/feh/background.jpeg
 /.config/feh/background-1.png
 /.config/feh/background-1.jpg
