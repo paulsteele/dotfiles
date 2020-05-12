@@ -41,3 +41,8 @@ source .zshrc
 
 # Firefox Help
 set in `about:config` `widget.content.gtk-theme-override = Adapta` if using Adapta-Nokoto
+
+# Mac Resources
+* https://github.com/koekeishiya/yabai
+* https://github.com/koekeishiya/skhd
+* https://github.com/somdoron/spacebar
