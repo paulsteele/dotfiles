@@ -87,7 +87,7 @@ fn - x : yabai -m space --mirror x-axis
 fn - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # toggle window native fullscreen
-alt - f : yabai -m window --toggle native-fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window border
 shift + alt - b : yabai -m window --toggle border
