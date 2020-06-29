@@ -10,6 +10,7 @@
 !.tigrc
 !.xinitrc
 !.xsession
+!.vimrc
 
 # .config directory
 !/.config/
