@@ -22,6 +22,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
   Plug 'amiralies/coc-elixir', {'do': 'yarn install --frozen-lockfile && yarn build'}
+  Plug 'fannheyward/coc-xml', {'do': 'yarn install --frozen-lockfile && yarn build'}
   Plug 'sheerun/vim-polyglot'
 call plug#end()
 
