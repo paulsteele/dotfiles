@@ -11,6 +11,7 @@
 !.xinitrc
 !.xsession
 !.vimrc
+!.ideavimrc
 
 # .config directory
 !/.config/
