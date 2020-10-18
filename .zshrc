@@ -88,3 +88,4 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 
 #Universal Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+alias tekton-clean='kubectl get pods -o name | grep build | xargs kubectl delete'
