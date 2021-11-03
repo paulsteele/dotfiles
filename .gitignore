@@ -28,6 +28,7 @@
 !/.config/skhd
 !/.config/spacebar
 !/.config/alacritty
+!/.config/karabiner
 /.config/feh/background.jpeg
 /.config/feh/background-1.png
 /.config/feh/background-1.jpg
@@ -39,5 +40,7 @@
 /.config/nvim/plugged
 /.config/nvim/.netrwhist
 /.config/nvim/spell/*.spl
+/.config/karabiner/assets
+/.config/karabiner/automatic_backups
 #.i3 directory
 !/.i3/
