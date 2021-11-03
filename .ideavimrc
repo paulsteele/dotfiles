@@ -10,7 +10,7 @@ noremap <C-w>; <C-w>l
 noremap <C-j> <C-f>
 noremap <C-k> <C-b>
 
-set commentary=true
+set commentary
 
 let mapleader = ","
 nmap <leader>f :action GotoFile <CR>
@@ -19,3 +19,4 @@ nmap <leader>r :action FindInPath <CR>
 nmap <leader>d :action GotoDeclaration <CR>
 nmap <leader>i :action GotoImplementation <CR>
 nmap <leader>c :action ShowIntentionActions <CR>
+nmap <leader>t :action RenameElement <CR>
