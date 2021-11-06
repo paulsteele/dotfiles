@@ -84,6 +84,8 @@ fi
 export EDITOR='nvim'
 # Use ripgrep for fzf
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+# fix gpg2 and sops
+export GPG_TTY=$(tty)
 
 #Universal Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
