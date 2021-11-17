@@ -32,66 +32,55 @@ sketchybar -m --default label.padding_left=2  \
 
 ############## LEFT ITEMS ############## 
 sketchybar -m --add space space_1 left                              \
-              --set space_1 associated_space=1                      \
-                        associated_display=1 \
+              --set space_1 \
                          label=I                                 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_2 left                              \
-              --set space_2 associated_space=2                      \
-                        associated_display=1 \
+              --set space_2 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=II                                 \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_3 left                              \
-              --set space_3 associated_space=3                      \
-                        associated_display=1 \
+              --set space_3 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=III                                  \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_4 left                              \
-              --set space_4 associated_space=4                      \
-                        associated_display=1 \
+              --set space_4 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=IV                                  \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_5 left                              \
-              --set space_5 associated_space=5                      \
-                        associated_display=1 \
+              --set space_5 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=V                                  \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_6 left                              \
-              --set space_6 associated_space=6                      \
-                        associated_display=2 \
+              --set space_6 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=VI                                  \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_7 left                              \
-              --set space_7 associated_space=7                      \
-                        associated_display=2 \
+              --set space_7 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=VII                                  \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_8 left                              \
-              --set space_8 associated_space=8                      \
-                        associated_display=2 \
+              --set space_8 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=VIII                                  \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_9 left                              \
-              --set space_9 associated_space=9                      \
-                        associated_display=2 \
+              --set space_9 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=IX                                  \
                          label.highlight_color=0x8fbcbbffff         \
               --add space space_10 left                              \
-              --set space_10 associated_space=10                      \
-                        associated_display=2 \
+              --set space_10 \
                          label.font="Cousine Nerd Font Mono:Regular:20.0"    \
                          label=X                                  \
                          label.highlight_color=0x8fbcbbffff
-8fbcbbff
 
 sketchybar -m --set space_1 script="~/.config/sketchybar/plugins/space.sh"
 sketchybar -m --set space_2 script="~/.config/sketchybar/plugins/space.sh"
@@ -133,8 +122,9 @@ sketchybar -m --add graph cpu_user right 200                                    
                                  script="~/.config/sketchybar/plugins/topproc.sh"
 
 ###################### CENTER ITEMS ###################
-
 ############## FINALIZING THE SETUP ##############
+
+./plugins/space_location.sh
 sketchybar -m --update
 
 echo "sketchybar configuration loaded.."
