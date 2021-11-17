@@ -124,7 +124,7 @@ sketchybar -m --add graph cpu_user right 200                                    
 ###################### CENTER ITEMS ###################
 ############## FINALIZING THE SETUP ##############
 
-./plugins/space_location.sh
+$HOME/.config/sketchybar/plugins/space_location.sh
 sketchybar -m --update
 
 echo "sketchybar configuration loaded.."
