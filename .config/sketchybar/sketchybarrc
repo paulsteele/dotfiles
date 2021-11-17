@@ -1,0 +1,140 @@
+# This is a demo config to bring across some of the most important commands more easily.
+#
+############## BAR ############## 
+sketchybar -m --bar height=25        \
+                    blur_radius=50   \
+                    position=top     \
+                    padding_left=10  \
+                    padding_right=10 \
+                    color=0x44000000
+
+############## GLOBAL DEFAULTS ############## 
+sketchybar -m --default updates=when_shown                    \
+                        drawing=on                            \
+                        cache_scripts=on                      \
+                        icon.font="Cousine Nerd Font Mono:Regular:17.0"  \
+                        icon.color=0xffffffff                 \
+                        label.font="Cousine Nerd Font Mono:Regular:14.0" \
+                        label.color=0xffffffff
+
+############## SPACE DEFAULTS ############## 
+sketchybar -m --default label.padding_left=2  \
+                        label.padding_right=2 \
+                        icon.padding_left=8   \
+                        label.padding_right=8
+
+############## ITEM DEFAULTS ###############
+sketchybar -m --default label.padding_left=2  \
+                        icon.padding_right=2  \
+                        icon.padding_left=6   \
+                        label.padding_right=6
+
+
+############## LEFT ITEMS ############## 
+sketchybar -m --add space space_1 left                              \
+              --set space_1 associated_space=1                      \
+                        associated_display=1 \
+                         label=I                                 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_2 left                              \
+              --set space_2 associated_space=2                      \
+                        associated_display=1 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=II                                 \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_3 left                              \
+              --set space_3 associated_space=3                      \
+                        associated_display=1 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=III                                  \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_4 left                              \
+              --set space_4 associated_space=4                      \
+                        associated_display=1 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=IV                                  \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_5 left                              \
+              --set space_5 associated_space=5                      \
+                        associated_display=1 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=V                                  \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_6 left                              \
+              --set space_6 associated_space=6                      \
+                        associated_display=2 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=VI                                  \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_7 left                              \
+              --set space_7 associated_space=7                      \
+                        associated_display=2 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=VII                                  \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_8 left                              \
+              --set space_8 associated_space=8                      \
+                        associated_display=2 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=VIII                                  \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_9 left                              \
+              --set space_9 associated_space=9                      \
+                        associated_display=2 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=IX                                  \
+                         label.highlight_color=0x8fbcbbffff         \
+              --add space space_10 left                              \
+              --set space_10 associated_space=10                      \
+                        associated_display=2 \
+                         label.font="Cousine Nerd Font Mono:Regular:20.0"    \
+                         label=X                                  \
+                         label.highlight_color=0x8fbcbbffff
+8fbcbbff
+
+sketchybar -m --set space_1 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_2 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_3 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_4 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_5 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_6 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_7 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_8 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_9 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_10 script="~/.config/sketchybar/plugins/space.sh"
+
+############## RIGHT ITEMS ############## 
+sketchybar -m --add item clock right                                                                  \
+              --set clock  \
+                  icon= \
+                  update_freq=10                                                      \
+                  script="~/.config/sketchybar/plugins/clock.sh"                      \
+
+# Creating Graphs
+sketchybar -m --add graph cpu_user right 200                                        \
+              --set cpu_user     graph.color=0xffffffff                             \
+                                 update_freq=2                                      \
+                                 width=0                                            \
+                                 label.padding_left=0                               \
+                                 icon=                                             \
+                                 script="~/.config/sketchybar/plugins/cpu_graph.sh" \
+                                 lazy=on                                            \
+                                                                                    \
+              --add graph cpu_sys right 200                                         \
+              --set cpu_sys      label.padding_left=0                               \
+                                 icon=                                             \
+                                 graph.color=0x8fbcbbffff                             \
+                                                                                    \
+              --add item topproc right                                              \
+              --set topproc                                       \
+                                 label.padding_right=10                             \
+                                 update_freq=15                                     \
+                                 script="~/.config/sketchybar/plugins/topproc.sh"
+
+###################### CENTER ITEMS ###################
+
+############## FINALIZING THE SETUP ##############
+sketchybar -m --update
+
+echo "sketchybar configuration loaded.."
