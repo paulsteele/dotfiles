@@ -99,11 +99,28 @@ sketchybar -m --set space_10 script="~/.config/sketchybar/plugins/space.sh"
 
 ############## RIGHT ITEMS ############## 
 sketchybar -m \
-    --add item clock right \
-    --set clock \
-        icon= \
-        update_freq=10 \
-        script="~/.config/sketchybar/plugins/clock.sh" \
+    --add item time right \
+    --set time update_freq=10 \
+        icon.padding_right=0 \
+        label.padding_left=0 \
+        script="~/.config/sketchybar/plugins/time.sh" \
+    --add item date right \
+    --set date update_freq=60 \
+        background.color=0xffe8e8e9 \
+        label.color=0xff000000 \
+        label.font="Cousine Nerd Font Mono:Regular:12" \
+        icon.padding_right=0 \
+        label.padding_left=0 \
+        background.height=15 \
+        background.corner_radius=4 \
+        script="~/.config/sketchybar/plugins/date.sh"
+
+sketchybar -m \
+    --add item battery right \
+    --set battery update_freq=3 \
+    --set battery script="~/.config/sketchybar/plugins/battery.sh" \
+    --set battery icon=
+
 
 # Creating Graphs
 sketchybar -m \
@@ -125,7 +142,12 @@ sketchybar -m \
     --set topproc \
         label.padding_right=10 \
         update_freq=15 \
-        script="~/.config/sketchybar/plugins/topproc.sh"
+        script="~/.config/sketchybar/plugins/topproc.sh" \
+    --add item topmem right \
+    --set topmem \
+        label.padding_right=10 \
+        update_freq=15 \
+        script="~/.config/sketchybar/plugins/topmem.sh"
 
 ###################### CENTER ITEMS ###################
 ############## FINALIZING THE SETUP ##############
