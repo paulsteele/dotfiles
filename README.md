@@ -48,4 +48,4 @@ https://gist.github.com/jexchan/2351996
 # Mac Resources
 * https://github.com/koekeishiya/yabai
 * https://github.com/koekeishiya/skhd
-* https://github.com/somdoron/spacebar
+* https://github.com/FelixKratz/SketchyBar
