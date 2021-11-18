@@ -97,6 +97,12 @@ sketchybar -m --set space_8 script="~/.config/sketchybar/plugins/space.sh"
 sketchybar -m --set space_9 script="~/.config/sketchybar/plugins/space.sh"
 sketchybar -m --set space_10 script="~/.config/sketchybar/plugins/space.sh"
 
+sketchybar -m \
+    --add item space_location_helper center \
+    --set space_location_helper \
+        script=$HOME/.config/sketchybar/plugins/space_location.sh \
+    --subscribe space_location_helper mission_control_exit
+
 ############## RIGHT ITEMS ############## 
 sketchybar -m \
     --add item time right \
@@ -151,6 +157,8 @@ sketchybar -m \
 
 ###################### CENTER ITEMS ###################
 ############## FINALIZING THE SETUP ##############
+
+
 
 $HOME/.config/sketchybar/plugins/space_location.sh
 sketchybar -m --update
