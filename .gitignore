@@ -29,6 +29,7 @@
 !/.config/alacritty
 !/.config/karabiner
 !/.config/sketchybar
+!/.config/komorebi
 /.config/feh/background.jpeg
 /.config/feh/background-1.png
 /.config/feh/background-1.jpg
@@ -44,3 +45,5 @@
 /.config/karabiner/automatic_backups
 #.i3 directory
 !/.i3/
+# downloaded spell files
+.config/nvim/spell/en.utf-8.sug
