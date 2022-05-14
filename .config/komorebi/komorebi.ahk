@@ -15,8 +15,6 @@ Run, komorebic.exe ensure-workspaces 0 5, , Hide
 ; Ensure there are 5 workspaces created on monitor 1
 Run, komorebic.exe ensure-workspaces 1 5, , Hide
 
-; Always float IntelliJ popups, matching on class
-Run, komorebic.exe float-rule class SunAwtDialog, , Hide
 ; Always float Control Panel, matching on title
 Run, komorebic.exe float-rule title "Control Panel", , Hide
 ; Always float Task Manager, matching on class
@@ -24,6 +22,10 @@ Run, komorebic.exe float-rule class TaskManagerWindow, , Hide
 
 ; Always manage forcibly these applications that don't automatically get picked up by komorebi
 Run, komorebic.exe manage-rule exe TIM.exe, , Hide
+
+Run, komorebic.exe manage-rule exe rider64.exe, , Hide
+
+;Run, komorebic identify-object-name-change-application exe rider64.exe, , Hide
 
 ; Identify applications that close to the tray
 Run, komorebic.exe identify-tray-application exe Discord.exe, , Hide
