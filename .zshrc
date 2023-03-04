@@ -69,7 +69,6 @@ export SPACESHIP_KUBECONTEXT_SYMBOL=" "
 plugins=(
   git
   kubectl
-  aws
   encode64
   sudo
 )
@@ -89,7 +88,4 @@ export GPG_TTY=$(tty)
 
 #Universal Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
-alias tekton-clean='kubectl get pods -o name | grep build | xargs kubectl delete'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
