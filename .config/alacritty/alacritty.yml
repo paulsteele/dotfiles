@@ -1,9 +1,9 @@
 scrolling:
   history: 12000
 font:
-  normal:
-    family: 'Cousine Nerd Font Mono'
   size: 20
+window:
+  opacity: 0.9
 colors:
   primary:
     background: '0x1b1f26'
