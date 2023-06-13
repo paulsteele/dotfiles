@@ -5,3 +5,4 @@ set updatetime=100
 set list listchars=tab:→\ ,trail:·
 set noshowmode
 au BufRead,BufNewFile *.yaml.dec set filetype=yaml
+au BufRead,BufNewFile *.qmd set filetype=markdown
