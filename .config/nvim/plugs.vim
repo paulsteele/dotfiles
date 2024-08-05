@@ -24,6 +24,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'amiralies/coc-elixir', {'do': 'yarn install --frozen-lockfile && yarn build'}
   Plug 'fannheyward/coc-xml', {'do': 'yarn install --frozen-lockfile && yarn build'}
   Plug 'sheerun/vim-polyglot'
+  Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 colorscheme nord
