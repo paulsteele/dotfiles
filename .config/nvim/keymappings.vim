@@ -27,3 +27,5 @@ nmap <C-e> :Lexplore<CR>
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~ '\s'
   endfunction
+
+nmap <leader>tt :lua require('toggle-checkbox').toggle()<CR>
