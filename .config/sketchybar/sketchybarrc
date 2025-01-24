@@ -84,6 +84,16 @@ sketchybar -m \
     --set space_10 \
         label.font="Cousine Nerd Font Mono:Regular:20.0" \
         label=X \
+        label.highlight_color=0x8fbcbbffff \
+    --add space space_11 left \
+    --set space_11 \
+        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label=XI \
+        label.highlight_color=0x8fbcbbffff \
+    --add space space_12 left \
+    --set space_12 \
+        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label=XII \
         label.highlight_color=0x8fbcbbffff
 
 sketchybar -m --set space_1 script="~/.config/sketchybar/plugins/space.sh"
@@ -96,6 +106,8 @@ sketchybar -m --set space_7 script="~/.config/sketchybar/plugins/space.sh"
 sketchybar -m --set space_8 script="~/.config/sketchybar/plugins/space.sh"
 sketchybar -m --set space_9 script="~/.config/sketchybar/plugins/space.sh"
 sketchybar -m --set space_10 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_11 script="~/.config/sketchybar/plugins/space.sh"
+sketchybar -m --set space_12 script="~/.config/sketchybar/plugins/space.sh"
 
 sketchybar -m \
     --add item space_location_helper center \

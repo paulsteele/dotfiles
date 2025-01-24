@@ -17,7 +17,7 @@ function GetNumberOfKeys() {
 NUM_MONITORS=$(GetNumberOfKeys "SpacesDisplayConfiguration:Management\ Data:Monitors")
 
 CURRENT_SPACE=1
-MAX_SPACES=10
+MAX_SPACES=12
 
 for ((i = 0; i < $NUM_MONITORS; i++))
 do

@@ -39,4 +39,7 @@ export GPG_TTY=$(tty)
 
 #Universal Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+alias mov-to-gif="find . -name \"*.mov\" -maxdepth 1 -type f -exec sh -c 'ffmpeg -i \"{}\" -pix_fmt rgb32 -r 10 -vf scale=720:-1 \"{}.output.gif\" && magick -layers Optimize \"{}.output.gif\" \"{}.optimized.gif\" && rm \"{}.output.gif\" ' \\;"
+alias mp4-to-gif="find . -name \"*.mp4\" -maxdepth 1 -type f -exec sh -c 'ffmpeg -i \"{}\" -pix_fmt rgb32 -r 10 -vf scale=720:-1 \"{}.output.gif\" && magick -layers Optimize \"{}.output.gif\" \"{}.optimized.gif\" && rm \"{}.output.gif\" ' \\;"
+
 
