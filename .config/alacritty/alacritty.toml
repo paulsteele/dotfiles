@@ -37,3 +37,18 @@ history = 12000
 
 [window]
 opacity = 0.9
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control|Command"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Equals"
+mods = "Control|Command"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "0"
+mods = "Control|Command"
+action = "ResetFontSize"
