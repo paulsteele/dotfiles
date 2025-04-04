@@ -40,15 +40,15 @@ opacity = 0.9
 
 [[keyboard.bindings]]
 key = "Minus"
-mods = "Control|Command"
+mods = "Control"
 action = "DecreaseFontSize"
 
 [[keyboard.bindings]]
 key = "Equals"
-mods = "Control|Command"
+mods = "Control"
 action = "IncreaseFontSize"
 
 [[keyboard.bindings]]
 key = "0"
-mods = "Control|Command"
+mods = "Control"
 action = "ResetFontSize"
