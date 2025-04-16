@@ -2,7 +2,15 @@ bind generic r refresh
 bind generic R !git revert %(commit)
 bind generic <Ctrl-R> !git rebase -i %(commit)^
 bind generic + !git commit --amend
-bind generic D !git diff %(commit)
+
+# View diffs using `delta`
+bind diff D >sh -c "git show %(commit) | delta --paging always"
+bind diff S >sh -c "git show %(commit) | delta --paging always --side-by-side"
+
+bind stage  D >sh -c "git diff HEAD -- %(file) | delta --paging always"
+bind stage  S >sh -c "git diff HEAD -- %(file) | delta --paging always --side-by-side"
+bind status D >sh -c "git diff HEAD -- %(file) | delta --paging always"
+bind status S >sh -c "git diff HEAD -- %(file) | delta --paging always --side-by-side"
 
 set vertical-split = false
 
