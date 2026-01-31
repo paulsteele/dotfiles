@@ -73,8 +73,8 @@
     },
     "systemd-failed-units": {
         "hide-on-ok": false,
-        "format": " {nr_failed}",
-        "format-ok": "",
+        "format": " {nr_failed}",
+        "format-ok": "󰸞",
     },
     "tray": {
         "spacing": 10
