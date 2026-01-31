@@ -39,11 +39,19 @@ source .zshrc
 1. Install vim-plug `curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 2. Run `:PlugInstall`
 
-# Firefox Help
+###  Firefox Help
 set in `about:config` `widget.content.gtk-theme-override = Adapta` if using Adapta-Nokoto
 
-# ssh Help
+###  ssh Help
 https://gist.github.com/jexchan/2351996
+
+### pcpanel + firefox issue
+https://bugzilla.mozilla.org/show_bug.cgi?id=1422637
+
+essentially set about:config media.volume_scale to 11 and firefox stops being a jerk
+
+### Minecraft audio pipewire
+echo drivers=pulse >> ~/.config/alsoft.conf
 
 # Mac Resources
 * https://github.com/koekeishiya/yabai
