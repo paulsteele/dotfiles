@@ -20,28 +20,31 @@
 
 	spacing: 0;
 	background-color: transparent;
+	text-color: @base04;
 
 	font: "Cousine Nerd Font Mono 16";
 }
 
 window {
 	transparency: "real";
-	fullscreen: true;
-        location: center;
-        anchor: center;
+	location: center;
+	anchor: center;
+	width: 1200px;
+	border-radius: 12px;
 	
 	background-color: #2E3440CC; /*base00 + CC (60% opacity)*/
 }
 
 mainbox {
 	children: [inputbar, message, listview];
-	spacing: 30px;
-	margin: 20%;
-	padding: 30px 0;
+	spacing: 20px;
+	padding: 20px;
 }
 
 inputbar {
-	padding: 0px 30px;
+	padding: 15px 20px;
+	background-color: @base01;
+	border-radius: 8px;
 	children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
@@ -81,20 +84,23 @@ button selected {
 
 listview {
 	scrollbar: true;
-	margin: 0 10px 0 30px;
+	margin: 0 10px 0 10px;
+	lines: 8;
+	fixed-height: false;
 }
 
 scrollbar {
-	background-color: @base03;
+	background-color: @base01;
 	handle-color: @base09;
-	handle-width: 10px;
-	border: 0 1px;
-	border-color: @base09;
-	margin: 0 0 0 20px;
+	handle-width: 6px;
+	border: 0;
+	margin: 8px 0 8px 15px;
+	border-radius: 3px;
 }
 
 element {
-	padding: 5px;
+	padding: 10px 15px;
+	border-radius: 6px;
 	highlight: bold underline;
 }
 
