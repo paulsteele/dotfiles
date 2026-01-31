@@ -18,6 +18,7 @@
 /.config/*
 !/.config/rofi
 !/.config/waybar
+!/.config/hypr
 !/.config/feh
 !/.config/i3status
 !/.config/terminator
