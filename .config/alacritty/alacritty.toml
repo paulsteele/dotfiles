@@ -30,7 +30,7 @@ foreground = "0xD8DEE9"
 size = 20
 
 [font.normal]
-family = "Cousine Nerd Font Mono"
+#family = "Cousine Nerd Font Mono"
 
 [scrolling]
 history = 12000
