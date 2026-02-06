@@ -19,27 +19,16 @@
 !/.config/rofi
 !/.config/waybar
 !/.config/hypr
-!/.config/feh
-!/.config/i3status
-!/.config/terminator
-!/.config/polybar
 !/.config/firefox
 !/.config/dunst
 !/.config/nvim
-!/.config/yabai
 !/.config/skhd
 !/.config/alacritty
-!/.config/karabiner
 !/.config/sketchybar
-!/.config/komorebi
-!/.config/yasb
 /.config/nvim/autoload
 /.config/nvim/plugged
 /.config/nvim/.netrwhist
 /.config/nvim/spell/*.spl
-/.config/karabiner/assets
-/.config/karabiner/automatic_backups
-#.i3 directory
-!/.i3/
+
 # downloaded spell files
 .config/nvim/spell/en.utf-8.sug
