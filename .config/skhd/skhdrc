@@ -1,4 +1,11 @@
-# Also see: /usr/local/Cellar/skhd/0.3.5/share/skhd/examples/skhdrc
-
 # open terminal
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty --working-directory ~
+
+# Disable Cmd + Q
+cmd - q : :
+
+# Quit frontmost app with Cmd + Shift + Q
+cmd + shift - q : osascript -e 'tell application (path to frontmost application as text) to quit'
+
+# Lock screen with Cmd + L
+cmd - l : pmset displaysleepnow
