@@ -108,8 +108,8 @@
         "menu-file": "~/.config/waybar/power_menu.xml",
         "menu-actions": {
             "suspend": "systemctl suspend",
-            "reboot": "reboot",
-            "shutdown": "shutdown now"
+            "reboot": "systemctl reboot",
+            "shutdown": "systemctl poweroff"
         }
     }
 }
