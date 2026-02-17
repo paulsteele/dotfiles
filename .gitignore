@@ -30,5 +30,10 @@
 /.config/nvim/.netrwhist
 /.config/nvim/spell/*.spl
 
+# claude
+!/.claude/
+/.claude/*
+!/.claude/settings.json
+
 # downloaded spell files
 .config/nvim/spell/en.utf-8.sug
