@@ -53,6 +53,9 @@ essentially set about:config media.volume_scale to 11 and firefox stops being a 
 ### Minecraft audio pipewire
 echo drivers=pulse >> ~/.config/alsoft.conf
 
+### Rider debug freeze stardew
+Help -> set vm options -Dawt.toolkit.name=WLToolkit
+
 # Mac Resources
 * https://github.com/koekeishiya/yabai
 * https://github.com/koekeishiya/skhd
