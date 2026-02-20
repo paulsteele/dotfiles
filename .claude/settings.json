@@ -5,7 +5,8 @@
       "Bash(find:*)",
       "Bash(grep:*)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git log:*)"
     ]
   },
   "model": "opus",
@@ -16,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [ \"$(uname)\" = \"Darwin\" ]; then terminal-notifier -title \"Claude Code\" -message \"I have finished the current task\"; else dunstify \"Claude Code\" \"I have finished the current task\"; fi"
+            "command": "~/.claude/claude-notify.sh 'I have finished the current task'"
           }
         ]
       }
@@ -27,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [ \"$(uname)\" = \"Darwin\" ]; then terminal-notifier -title \"Claude Code\" -message \"Permission request\"; else dunstify \"Claude Code\" \"Permission request\"; fi"
+            "command": "~/.claude/claude-notify.sh 'Permission request'"
           }
         ]
       }
@@ -35,3 +36,4 @@
   },
   "alwaysThinkingEnabled": true
 }
+
