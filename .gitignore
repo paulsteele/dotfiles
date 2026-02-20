@@ -32,6 +32,7 @@
 !/.claude/
 /.claude/*
 !/.claude/settings.json
+!/.claude/claude-notify.sh
 !/.config/git
 /.config/git/*
 !/.config/git/ignore
