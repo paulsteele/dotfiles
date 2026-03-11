@@ -12,6 +12,7 @@
 !.xsession
 !.vimrc
 !.ideavimrc
+!.p10k.zsh
 
 # .config directory
 !/.config/
