@@ -48,6 +48,17 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit ice wait lucid as"completion"
 zinit snippet "$BUN_INSTALL/_bun"
 
+zinit ice wait lucid atload'
+  alias k=kubectl
+  kubectl() {
+    unfunction kubectl
+    source <(command kubectl completion zsh)
+    compdef k=kubectl
+    command kubectl "$@"
+  }
+' id-as"kubectl-lazy"
+zinit light zdharma-continuum/null
+
 zinit wait lucid for \
   blockf atinit"zicompinit; zicdreplay; compdef config=git" \
     zsh-users/zsh-completions \
