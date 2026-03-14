@@ -37,6 +37,7 @@
 !/.config/git
 /.config/git/*
 !/.config/git/ignore
+!/.config/zypper-autoupdates
 
 # downloaded spell files
 .config/nvim/spell/en.utf-8.sug

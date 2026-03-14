@@ -43,6 +43,7 @@ window#waybar.hidden {
 #systemd-failed-units,
 #memory,
 #custom-power,
+#custom-updates,
 #battery,
 #backlight,
 #wireplumber,

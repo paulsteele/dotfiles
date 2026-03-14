@@ -1,0 +1,11 @@
+[Unit]
+Description=Zypper refresh and download updates
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/zypper --non-interactive refresh
+ExecStartPost=/usr/bin/zypper --non-interactive dist-upgrade --download-only --auto-agree-with-licenses
+Nice=19
+IOSchedulingClass=idle
