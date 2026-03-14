@@ -16,6 +16,7 @@
         "memory",
         "wireplumber",
         "systemd-failed-units",
+        "custom/updates",
         "custom/power"
     ],
     "wlr/taskbar": {
@@ -75,6 +76,15 @@
         "hide-on-ok": false,
         "format": " {nr_failed}",
         "format-ok": "󰸞",
+    },
+    "custom/updates": {
+        "format": " {}",
+        "interval": 0,
+        "exec": "zypper --non-interactive list-updates 2>/dev/null | grep '^v' | wc -l",
+        "tooltip": true,
+        "tooltip-format": "{} updates available",
+        "signal": 8,
+        "return-type": ""
     },
     "tray": {
         "spacing": 10
