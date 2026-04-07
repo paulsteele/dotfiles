@@ -78,7 +78,7 @@
         "format-ok": "󰸞",
     },
     "custom/updates": {
-        "format": " {}",
+        "format": "󱧘 {}",
         "interval": 0,
         "exec": "zypper --non-interactive list-updates 2>/dev/null | grep '^v' | wc -l",
         "tooltip": true,
