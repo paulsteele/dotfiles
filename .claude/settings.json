@@ -1,5 +1,9 @@
 {
-  "includeCoAuthoredBy": false,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "outputStyle": "Explanatory",
   "permissions": {
     "allow": [
       "Bash(find:*)",
@@ -38,5 +42,6 @@
   },
   "alwaysThinkingEnabled": true,
   "showThinkingSummaries": true,
+  "feedbackSurveyRate": 0,
   "effortLevel": "85"
 }
