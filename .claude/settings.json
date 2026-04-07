@@ -36,5 +36,7 @@
       }
     ]
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "showThinkingSummaries": true,
+  "effortLevel": "85"
 }
