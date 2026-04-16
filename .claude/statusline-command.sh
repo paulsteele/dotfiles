@@ -2,7 +2,7 @@
 
 # ── config: icons ──
 ICON_MODEL=""         # nf-oct-cpu
-ICON_CTX="󰊠"          # nf-md-pac_man
+ICON_CTX="󱐖"          # nf-md-pac_man
 ICON_COST=" "          # nf-fa-sack_dollar 
 ICON_TIME="󰅐"          # nf-md-clock_outline
 ICON_API="󰓅"          # nf-md-lightning_bolt_outline
@@ -54,7 +54,7 @@ parts=()
 
 [ -n "$model" ]          && parts+=("$(c "$C_MODEL" "$ICON_MODEL $model")")
 [ -n "$used_pct" ]       && parts+=("$(c "$C_CTX" "$ICON_CTX $(printf '%.0f' "$used_pct")%")")
-[ -n "$cost_usd" ]       && parts+=("$(c "$C_COST" "${ICON_COST}${cost_usd}")")
+[ -n "$cost_usd" ]       && parts+=("$(c "$C_COST" "${ICON_COST}$(printf '%.2f' "$cost_usd")")")
 
 [ -n "$duration_ms" ]    && parts+=("$(c "$C_TIME" "$ICON_TIME $(awk "BEGIN {printf \"%.1f\", $duration_ms / 1000}")s")")
 [ -n "$api_duration_ms" ] && parts+=("$(c "$C_API" "$ICON_API $(awk "BEGIN {printf \"%.1f\", $api_duration_ms / 1000}")s")")
