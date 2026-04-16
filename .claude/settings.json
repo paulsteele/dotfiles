@@ -3,7 +3,6 @@
     "commit": "",
     "pr": ""
   },
-  "outputStyle": "Explanatory",
   "permissions": {
     "allow": [
       "Bash(find:*)",
@@ -15,7 +14,7 @@
       "Bash(git log:*)"
     ]
   },
-  "model": "opus[1m]",
+  "model": "claude-opus-4-7[1m]",
   "hooks": {
     "Stop": [
       {
@@ -40,8 +39,8 @@
       }
     ]
   },
-  "alwaysThinkingEnabled": true,
-  "showThinkingSummaries": true,
+  "outputStyle": "Explanatory",
   "feedbackSurveyRate": 0,
-  "effortLevel": "85"
+  "alwaysThinkingEnabled": true,
+  "showThinkingSummaries": true
 }
