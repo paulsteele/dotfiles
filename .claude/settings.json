@@ -1,8 +1,4 @@
 {
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline-command.sh"
-  },
   "attribution": {
     "commit": "",
     "pr": ""
@@ -18,7 +14,7 @@
       "Bash(git log:*)"
     ]
   },
-  "model": "claude-opus-4-7[1m]",
+  "model": "claude-opus-4-8[1m]",
   "hooks": {
     "Stop": [
       {
@@ -43,8 +39,13 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
   "outputStyle": "Explanatory",
   "feedbackSurveyRate": 0,
   "alwaysThinkingEnabled": true,
-  "showThinkingSummaries": true
+  "showThinkingSummaries": true,
+  "skipAutoPermissionPrompt": true
 }
