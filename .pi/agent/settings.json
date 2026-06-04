@@ -1,0 +1,12 @@
+{
+  "lastChangelogVersion": "0.78.1",
+  "defaultProvider": "llama-server",
+  "defaultModel": "unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_XL",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-llama-cpp",
+    "npm:pi-web-access",
+    "npm:@gotgenes/pi-permission-system"
+  ],
+  "llamaServerUrl": "http://127.0.0.1:8000"
+}
