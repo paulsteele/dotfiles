@@ -40,5 +40,14 @@
 !/.config/git/ignore
 !/.config/zypper-autoupdates
 
+!/.pi/
+/.pi/agent/*
+!/.pi/agent/settings.json
+!/.pi/agent/extensions/
+/.pi/agent/extensions/*
+!.pi/agent/extensions/pi-permission-system/
+/.pi/agent/extensions/pi-permission-system/*
+!.pi/agent/extensions/pi-permission-system/config.json
+
 # downloaded spell files
 .config/nvim/spell/en.utf-8.sug
