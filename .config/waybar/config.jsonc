@@ -11,6 +11,7 @@
         "clock"
     ],
     "modules-right": [
+        "custom/llm",
         "tray",
         "load",
         "memory",
@@ -106,6 +107,14 @@
         },
         "on-click": "pavucontrol",
         "scroll-step": 1
+    },
+    "custom/llm": {
+        "format": "{}",
+        "exec": "~/.config/waybar/llm-widget.sh status",
+        "interval": 30,
+        "return-type": "json",
+        "on-click": "~/.config/waybar/llm-widget.sh menu",
+        "tooltip": true
     },
     "custom/logo": {
         "format": "  ",

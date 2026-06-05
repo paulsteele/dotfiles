@@ -7,9 +7,30 @@
       "*.env.*": "deny",
       "*.env.example": "allow"
     },
+    "ls": "allow",
+    "find": "allow",
+    "grep": "allow",
+    "read": "allow",
+    "write": {
+      "*": "ask",
+      "PLAN.md": "allow"
+    },
+    "edit": {
+      "*": "ask",
+      "PLAN.md": "allow"
+    },
+    "plannotator_submit_plan": "allow",
+    "ask_user_question": "allow",
     "bash": {
       "*": "ask",
-      "ls *": "allow"
+      "ls *": "allow",
+      "file *": "allow",
+      "find *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
+      "which *": "allow",
+      "grep *": "allow",
+      "pwd *": "allow"
     },
     "external_directory": "ask"
   }
