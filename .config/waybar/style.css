@@ -73,6 +73,26 @@ window#waybar.hidden {
   background-color: #ebcb8b;
 }
 
+/* LLM widget - catppuccin teal when running, grey when stopped */
+#custom-llm {
+  margin: 6px 3px;
+  padding: 6px 12px;
+  background-color: #3b4252;
+  color: #eceff4;
+}
+#custom-llm.llama-running.webui-running {
+  background-color: #88c0d0;
+  color: #2e3440;
+}
+#custom-llm.llama-running.webui-stopped {
+  background-color: #81a1c1;
+  color: #2e3440;
+}
+#custom-llm.llama-stopped.webui-running {
+  background-color: #8fbcbb;
+  color: #2e3440;
+}
+
 /* Systemd units - green when ok, red when degraded */
 #systemd-failed-units.ok {
   background-color: #a3be8c;
