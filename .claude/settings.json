@@ -14,7 +14,7 @@
       "Bash(git log:*)"
     ]
   },
-  "model": "claude-opus-4-8[1m]",
+  "model": "opus[1m]",
   "hooks": {
     "Stop": [
       {
@@ -43,9 +43,22 @@
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
   },
+  "enabledPlugins": {
+    "plannotator@plannotator": true
+  },
+  "extraKnownMarketplaces": {
+    "plannotator": {
+      "source": {
+        "source": "github",
+        "repo": "backnotprop/plannotator"
+      }
+    }
+  },
   "outputStyle": "Explanatory",
   "feedbackSurveyRate": 0,
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "showThinkingSummaries": true,
+  "skipWorkflowUsageWarning": true,
   "skipAutoPermissionPrompt": true
 }

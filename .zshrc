@@ -74,6 +74,7 @@ zinit wait lucid for \
     zstyle ':completion:*:descriptions' format '[%d]'
     zstyle ':completion:*' list-colors \${(s.:.)LS_COLORS}
     zstyle ':completion:*' menu no
+    zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
     zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always \$realpath'
     zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
     zstyle ':fzf-tab:*' use-fzf-default-opts yes
