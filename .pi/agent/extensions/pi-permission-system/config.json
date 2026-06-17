@@ -30,7 +30,8 @@
       "tail *": "allow",
       "which *": "allow",
       "grep *": "allow",
-      "pwd *": "allow"
+      "pwd *": "allow",
+      "git log *": "allow"
     },
     "external_directory": "ask"
   }
