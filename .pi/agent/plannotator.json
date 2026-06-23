@@ -5,6 +5,7 @@
         "provider": "openai-codex",
         "id": "gpt-5.4"
       },
+      "thinking": "high",
       "activeTools": [
         "web_search",
         "code_search",
