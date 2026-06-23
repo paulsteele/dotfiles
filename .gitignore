@@ -43,6 +43,7 @@
 !/.pi/
 /.pi/agent/*
 !/.pi/agent/settings.json
+!/.pi/agent/plannotator.json
 !/.pi/agent/extensions/
 /.pi/agent/extensions/*
 !.pi/agent/extensions/pi-permission-system/
