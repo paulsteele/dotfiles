@@ -14,7 +14,7 @@
       "Bash(git log:*)"
     ]
   },
-  "model": "opus[1m]",
+  "model": "opus",
   "hooks": {
     "Stop": [
       {
@@ -58,8 +58,9 @@
   "feedbackSurveyRate": 0,
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
+  "tui": "fullscreen",
   "showThinkingSummaries": true,
   "skipWorkflowUsageWarning": true,
-  "skipAutoPermissionPrompt": true,
-  "tui": "fullscreen"
+  "theme": "dark",
+  "skipAutoPermissionPrompt": true
 }
