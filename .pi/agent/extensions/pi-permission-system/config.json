@@ -1,7 +1,7 @@
 {
   "debugLog": false,
   "permissionReviewLog": true,
-  "yoloMode": true,
+  "yoloMode": false,
   "permission": {
     "*": "ask",
     "path": {
@@ -34,7 +34,9 @@
       "which *": "allow",
       "grep *": "allow",
       "pwd *": "allow",
-      "git log *": "allow"
+      "git log *": "allow",
+      "sort *": "allow",
+      "rg *": "allow"
     },
     "external_directory": "ask"
   }
