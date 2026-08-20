@@ -6,7 +6,7 @@
   font-size: 13px;
 }
 window#waybar {
-  background-color: #181825;
+  background-color: #15141b;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -23,21 +23,21 @@ window#waybar.hidden {
   padding: 6px 18px;
   margin: 6px 3px;
   border-radius: 4px;
-  background-color: #3b4252;
-  color: #eceff4;
+  background-color: #29263c;
+  color: #edecee;
 }
 #workspaces button.active {
-  color: #2e3440;
-  background-color: #88c0d0;
+  color: #15141b;
+  background-color: #a277ff;
 }
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
-  color: #2e3440;
-  background-color: #88c0d0;
+  color: #15141b;
+  background-color: #a277ff;
 }
 #workspaces button.urgent {
-  background-color: #bf616a;
+  background-color: #ff6767;
 }
 #load,
 #systemd-failed-units,
@@ -53,8 +53,8 @@ window#waybar.hidden {
   border-radius: 4px;
   margin: 6px 3px;
   padding: 6px 12px;
-  background-color: #3b4252;
-  color: #2e3440;
+  background-color: #29263c;
+  color: #15141b;
 }
 #custom-power {
   margin-right: 6px;
@@ -65,117 +65,117 @@ window#waybar.hidden {
   margin-left: 5px;
   font-size: 15px;
   border-radius: 8px 0px 0px 8px;
-  color: #5e81ac;
+  color: #a277ff;
 }
 
 /* Memory - orange/yellow for resource usage awareness */
 #memory {
-  background-color: #ebcb8b;
+  background-color: #ffca85;
 }
 
-/* LLM widget - catppuccin teal when running, grey when stopped */
+/* LLM widget - Aura status colors */
 #custom-llm {
   margin: 6px 3px;
   padding: 6px 12px;
-  background-color: #3b4252;
-  color: #eceff4;
+  background-color: #29263c;
+  color: #edecee;
 }
 #custom-llm.llama-running.webui-running {
-  background-color: #88c0d0;
-  color: #2e3440;
+  background-color: #a277ff;
+  color: #15141b;
 }
 #custom-llm.llama-running.webui-stopped {
-  background-color: #81a1c1;
-  color: #2e3440;
+  background-color: #82e2ff;
+  color: #15141b;
 }
 #custom-llm.llama-stopped.webui-running {
-  background-color: #8fbcbb;
-  color: #2e3440;
+  background-color: #61ffca;
+  color: #15141b;
 }
 
 /* Systemd units - green when ok, red when degraded */
 #systemd-failed-units.ok {
-  background-color: #a3be8c;
-  color: #2e3440;
+  background-color: #61ffca;
+  color: #15141b;
 }
 #systemd-failed-units.degraded {
-  background-color: #bf616a;
-  color: #eceff4;
+  background-color: #ff6767;
+  color: #edecee;
 }
 
 /* Audio/volume - purple for media */
 #wireplumber {
-  background-color: #b48ead;
+  background-color: #f694ff;
 }
 #wireplumber.muted {
-  background-color: #4c566a;
-  color: #d8dee9;
+  background-color: #6d6d6d;
+  color: #edecee;
 }
 
 /* Load average - teal/cyan for system metrics */
 #load {
-  background-color: #8fbcbb;
+  background-color: #61ffca;
   padding-right: 17px;
 }
 
 /* Clock - frost blue for time */
 #clock {
   font-family: MesloLGL Nerd Font;
-  background-color: #81a1c1;
+  background-color: #82e2ff;
 }
 
-/* Power button - subtle aurora red */
+/* Power button - Aura red */
 #custom-power {
-  background-color: #bf616a;
-  color: #eceff4;
+  background-color: #ff6767;
+  color: #edecee;
 }
 #custom-updates {
-  background-color: #81a1c1;
+  background-color: #82e2ff;
 }
 
 /* Battery states */
 #battery {
-  background-color: #a3be8c;
+  background-color: #61ffca;
 }
 #battery.charging {
-  background-color: #a3be8c;
+  background-color: #61ffca;
 }
 #battery.warning:not(.charging) {
-  background-color: #ebcb8b;
+  background-color: #ffca85;
 }
 #battery.critical:not(.charging) {
-  background-color: #bf616a;
-  color: #eceff4;
+  background-color: #ff6767;
+  color: #edecee;
 }
 
 /* Backlight - warm yellow for brightness */
 #backlight {
-  background-color: #ebcb8b;
+  background-color: #ffca85;
 }
 
 /* Network states */
 #network {
-  background-color: #88c0d0;
+  background-color: #a277ff;
 }
 #network.disconnected {
-  background-color: #4c566a;
-  color: #d8dee9;
+  background-color: #6d6d6d;
+  color: #edecee;
 }
 
 /* Tray */
 #tray {
-  background-color: #4c566a;
-  color: #eceff4;
+  background-color: #6d6d6d;
+  color: #edecee;
 }
 
 tooltip {
   border-radius: 8px;
   padding: 15px;
-  background-color: #2e3440;
-  border: 1px solid #4c566a;
+  background-color: #15141b;
+  border: 1px solid #6d6d6d;
 }
 tooltip label {
   padding: 5px;
-  background-color: #2e3440;
-  color: #eceff4;
+  background-color: #15141b;
+  color: #edecee;
 }

@@ -1,28 +1,27 @@
 * {
-	base00: #2E3440;
-	base01: #3B4252;
-	base02: #424C5E;
-	base03: #4C566A;
-	base04: #D8DEE9;
-	base05: #E5E9F0;
-	base06: #ECEFF4;
-	base07: #8FBCBB;
-	base08: #88C0D0;
-	base09: #81A1C1;
-	base0A: #5E81AC;
-	base0B: #BF616A;
-	base0C: #D08770;
-	base0D: #EBCB8B;
-	base0E: #A3BE8C;
-	base0F: #B48EAD;
-
-	/*base0D: #00BCD4;*/
+	/* Aura Theme semantic palette */
+	base00: #15141B;
+	base01: #29263C;
+	base02: #3D375E;
+	base03: #6D6D6D;
+	base04: #EDECEE;
+	base05: #EDECEE;
+	base06: #EDECEE;
+	base07: #82E2FF;
+	base08: #A277FF;
+	base09: #A277FF;
+	base0A: #82E2FF;
+	base0B: #61FFCA;
+	base0C: #F694FF;
+	base0D: #FFCA85;
+	base0E: #61FFCA;
+	base0F: #FF6767;
 
 	spacing: 0;
 	background-color: transparent;
 	text-color: @base04;
 
-	font: "Cousine Nerd Font Mono 16";
+	font: "MesloLGL Nerd Font 16";
 }
 
 window {
@@ -32,7 +31,7 @@ window {
 	width: 1200px;
 	border-radius: 12px;
 	
-	background-color: #2E3440CC; /*base00 + CC (60% opacity)*/
+	background-color: #15141BCC; /* Aura background + opacity */
 }
 
 mainbox {

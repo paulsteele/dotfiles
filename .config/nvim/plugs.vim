@@ -12,7 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'tpope/vim-surround'
   Plug 'vmchale/dhall-vim'
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'daltonmenezes/aura-theme', { 'rtp': 'packages/neovim' }
   Plug 'towolf/vim-helm'
   Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
@@ -28,4 +28,4 @@ call plug#begin('~/.config/nvim/plugged')
 
 call plug#end()
 
-colorscheme nord
+colorscheme aura-dark

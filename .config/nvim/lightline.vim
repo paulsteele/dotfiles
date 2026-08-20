@@ -36,7 +36,7 @@ let g:lightline = {
 \   'left': "|",
 \   'right': "|"
 \ },
-\ 'colorscheme': 'nord'
+\ 'colorscheme': 'aura'
 \ }
 
 let g:lightline#ale#indicator_checking = "\uf110"

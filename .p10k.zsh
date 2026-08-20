@@ -1681,6 +1681,71 @@
   # typeset -g POWERLEVEL9K_EXAMPLE_FOREGROUND=208
   # typeset -g POWERLEVEL9K_EXAMPLE_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
+  ##################################[ Aura Theme overrides ]###################################
+  # Keep the generated prompt layout while aligning its visible semantic colors with Aura.
+  local aura_bg='#15141b'
+  local aura_surface='#29263c'
+  local aura_text='#edecee'
+  local aura_muted='#6d6d6d'
+  local aura_purple='#a277ff'
+  local aura_green='#61ffca'
+  local aura_orange='#ffca85'
+  local aura_pink='#f694ff'
+  local aura_blue='#82e2ff'
+  local aura_red='#ff6767'
+
+  # Frame, filler, and primary prompt segments.
+  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{$aura_muted}╭─"
+  typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_PREFIX="%F{$aura_muted}├─"
+  typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{$aura_muted}╰─"
+  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_SUFFIX="%F{$aura_muted}─╮"
+  typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_SUFFIX="%F{$aura_muted}─┤"
+  typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_SUFFIX="%F{$aura_muted}─╯"
+  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_FOREGROUND=$aura_muted
+  typeset -g POWERLEVEL9K_RULER_FOREGROUND=$aura_muted
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=$aura_pink
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$aura_purple
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$aura_muted
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$aura_blue
+  typeset -g POWERLEVEL9K_TIME_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$aura_red
+
+  # Git and command state colors.
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=$aura_purple
+  typeset -g POWERLEVEL9K_VCS_LOADING_VISUAL_IDENTIFIER_COLOR=$aura_muted
+  typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=$aura_orange
+  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$aura_red
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=$aura_red
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND=$aura_red
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$aura_orange
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=$aura_blue
+
+  # Common environment and system states.
+  typeset -g POWERLEVEL9K_CONTEXT_{ROOT,REMOTE,REMOTE_SUDO}_FOREGROUND=$aura_orange
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=$aura_text
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND=$aura_purple
+  typeset -g POWERLEVEL9K_TERRAFORM_OTHER_FOREGROUND=$aura_purple
+  typeset -g POWERLEVEL9K_AWS_DEFAULT_FOREGROUND=$aura_orange
+  typeset -g POWERLEVEL9K_AZURE_OTHER_FOREGROUND=$aura_blue
+  typeset -g POWERLEVEL9K_GCLOUD_FOREGROUND=$aura_blue
+  typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND=$aura_red
+  typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=$aura_muted
+  typeset -g POWERLEVEL9K_WIFI_FOREGROUND=$aura_blue
+  typeset -g POWERLEVEL9K_LOAD_NORMAL_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_LOAD_WARNING_FOREGROUND=$aura_orange
+  typeset -g POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND=$aura_red
+  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_FOREGROUND=$aura_green
+  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_FOREGROUND=$aura_orange
+  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_FOREGROUND=$aura_red
+
   # Transient prompt works similarly to the builtin transient_rprompt option. It trims down prompt
   # when accepting a command line. Supported values:
   #
