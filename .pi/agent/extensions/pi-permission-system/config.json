@@ -36,8 +36,14 @@
       "pwd *": "allow",
       "git log *": "allow",
       "sort *": "allow",
-      "rg *": "allow"
+      "rg *": "allow",
+      "git status *": "allow",
+      "nl *": "allow",
+      "sed -n *": "allow",
+      "printf *": "allow"
     },
+    "source_check": "allow",
+    "get_search_content": "allow",
     "external_directory": "ask"
   }
 }
