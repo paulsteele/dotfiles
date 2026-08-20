@@ -1,0 +1,4 @@
+{
+  "provider": "kagi",
+  "kagiApiKey": "$KAGI_API_KEY"
+}
