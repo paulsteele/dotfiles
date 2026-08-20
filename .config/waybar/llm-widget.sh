@@ -4,15 +4,15 @@ set -euo pipefail
 LLAMA_SVC="llama-server"
 WEBUI_SVC="open-webui"
 
-# Colors for rofi (catppuccin mocha)
-ROFI_THEME="--theme-str 'window { background: #2e3440; border: 1px solid #4c566a; }
-                       textbox { color: #81a1c1; }
-                       listview { color: #eceff4; }
-                       element { border-color: #4c566a; }
-                       element.normal { color: #eceff4; }
-                       element.selected { background: #88c0d0; color: #2e3440; }
-                       element-symbol.normal { color: #ebcb8b; }
-                       element-symbol.selected { color: #88c0d0; }
+# Colors for rofi (Aura Theme)
+ROFI_THEME="--theme-str 'window { background: #15141b; border: 1px solid #a277ff; }
+                       textbox { color: #82e2ff; }
+                       listview { color: #edecee; }
+                       element { border-color: #3d375e; }
+                       element.normal { color: #edecee; }
+                       element.selected { background: #a277ff; color: #15141b; }
+                       element-symbol.normal { color: #ffca85; }
+                       element-symbol.selected { color: #61ffca; }
                        button { padding: 8px 16px; }'"
 
 get_status() {

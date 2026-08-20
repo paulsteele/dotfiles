@@ -18,7 +18,7 @@
     "npm:pi-provider-litellm",
     "npm:pi-open-tui"
   ],
-  "theme": "dark",
+  "theme": "aura",
   "npmCommand": [
     "bun"
   ]

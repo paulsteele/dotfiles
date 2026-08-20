@@ -7,17 +7,17 @@ sketchybar -m --bar \
     position=top \
     padding_left=10 \
     padding_right=10 \
-    color=0x44000000
+    color=0x6615141b
 
 ############## GLOBAL DEFAULTS ############## 
 sketchybar -m --default \
     updates=when_shown \
     drawing=on \
     cache_scripts=on \
-    icon.font="Cousine Nerd Font Mono:Regular:17.0"  \
-    icon.color=0xffffffff \
-    label.font="Cousine Nerd Font Mono:Regular:14.0" \
-    label.color=0xffffffff
+    icon.font="MesloLGL Nerd Font:Regular:17.0"  \
+    icon.color=0xffedecee \
+    label.font="MesloLGL Nerd Font:Regular:14.0" \
+    label.color=0xffedecee
 
 ############## SPACE DEFAULTS ############## 
 sketchybar -m --default \
@@ -38,63 +38,63 @@ sketchybar -m \
     --add space space_1 left \
     --set space_1 \
         label=I \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
-        label.highlight_color=0x8fbcbbffff \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
+        label.highlight_color=0xffa277ff \
     --add space space_2 left \
     --set space_2 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=II \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_3 left\
     --set space_3 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0"\
+        label.font="MesloLGL Nerd Font:Regular:20.0"\
         label=III \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_4 left \
     --set space_4 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=IV \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_5 left \
     --set space_5 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=V \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_6 left \
     --set space_6 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=VI \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_7 left \
     --set space_7 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=VII \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_8 left \
     --set space_8 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=VIII \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_9 left \
     --set space_9 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=IX \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_10 left \
     --set space_10 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=X \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_11 left \
     --set space_11 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=XI \
-        label.highlight_color=0x8fbcbbffff \
+        label.highlight_color=0xffa277ff \
     --add space space_12 left \
     --set space_12 \
-        label.font="Cousine Nerd Font Mono:Regular:20.0" \
+        label.font="MesloLGL Nerd Font:Regular:20.0" \
         label=XII \
-        label.highlight_color=0x8fbcbbffff
+        label.highlight_color=0xffa277ff
 
 sketchybar -m --set space_1 script="~/.config/sketchybar/plugins/space.sh"
 sketchybar -m --set space_2 script="~/.config/sketchybar/plugins/space.sh"
@@ -124,9 +124,9 @@ sketchybar -m \
         script="~/.config/sketchybar/plugins/time.sh" \
     --add item date right \
     --set date update_freq=60 \
-        background.color=0xffe8e8e9 \
-        label.color=0xff000000 \
-        label.font="Cousine Nerd Font Mono:Regular:12" \
+        background.color=0xffffca85 \
+        label.color=0xff15141b \
+        label.font="MesloLGL Nerd Font:Regular:12" \
         icon.padding_right=0 \
         label.padding_left=0 \
         background.height=15 \
@@ -137,14 +137,14 @@ sketchybar -m \
     --add item battery right \
     --set battery update_freq=3 \
     --set battery script="~/.config/sketchybar/plugins/battery.sh" \
-    --set battery icon=
+    --set battery icon=
 
 
 # Creating Graphs
 sketchybar -m \
     --add graph cpu_user right 200 \
     --set cpu_user \
-        graph.color=0xffffffff \
+        graph.color=0xffedecee \
         update_freq=2 \
         width=0 \
         label.padding_left=0 \
@@ -155,7 +155,7 @@ sketchybar -m \
     --set cpu_sys \
         label.padding_left=0 \
         icon= \
-        graph.color=0x8fbcbbffff \
+        graph.color=0xffa277ff \
     --add item topproc right \
     --set topproc \
         label.padding_right=10 \
