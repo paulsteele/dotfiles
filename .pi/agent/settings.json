@@ -1,17 +1,22 @@
 {
-  "lastChangelogVersion": "0.83.0",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.4",
-  "defaultThinkingLevel": "high",
   "lastChangelogVersion": "0.84.2",
+  "defaultProvider": "litellm",
+  "defaultModel": "amod-gpt-5.6-sol",
   "defaultThinkingLevel": "medium",
+  "tuiMode": "fullscreen",
+  "litellm": {
+    "skills": {
+      "enabled": false
+    }
+  },
   "packages": [
     "npm:pi-llama-cpp",
     "npm:pi-web-access",
     "npm:@gotgenes/pi-permission-system",
     "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:pi-provider-litellm"
+    "npm:pi-provider-litellm",
+    "npm:pi-open-tui"
   ],
   "theme": "dark",
   "npmCommand": [
