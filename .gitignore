@@ -41,11 +41,15 @@
 !/.config/zypper-autoupdates
 
 !/.pi/
+/.pi/web-search-cache/*
 /.pi/agent/*
 !/.pi/agent/settings.json
 !/.pi/agent/plannotator.json
 !/.pi/agent/extensions/
 /.pi/agent/extensions/*
+# Personal Pi extensions live under one tracked, auto-discovered bundle.
+!/.pi/agent/extensions/local/
+!/.pi/agent/extensions/local/**
 !.pi/agent/extensions/pi-permission-system/
 /.pi/agent/extensions/pi-permission-system/*
 !.pi/agent/extensions/pi-permission-system/config.json
