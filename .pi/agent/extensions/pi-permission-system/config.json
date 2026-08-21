@@ -20,7 +20,8 @@
     },
     "edit": {
       "*": "ask",
-      "PLAN.md": "allow"
+      "PLAN.md": "allow",
+      "plans/*": "allow"
     },
     "plannotator_submit_plan": "allow",
     "ask_user_question": "allow",
