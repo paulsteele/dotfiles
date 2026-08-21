@@ -40,6 +40,12 @@
 !/.config/git/ignore
 !/.config/zypper-autoupdates
 
+# Hammerspoon bridge for Pi desktop notifications
+!/.hammerspoon/
+/.hammerspoon/*
+!/.hammerspoon/init.lua
+!/.hammerspoon/pi-notify.lua
+
 !/.pi/
 /.pi/web-search-cache/*
 /.pi/agent/*

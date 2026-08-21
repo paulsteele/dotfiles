@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.84.2",
   "defaultProvider": "litellm",
   "defaultModel": "amod-gpt-5.6-sol",
-  "defaultThinkingLevel": "medium",
+  "defaultThinkingLevel": "xhigh",
   "enableSkillCommands": true,
   "tuiMode": "fullscreen",
   "litellm": {
@@ -17,7 +17,7 @@
     "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-provider-litellm",
-    "npm:pi-open-tui"
+    "npm:pi-atelier@0.8.2"
   ],
   "theme": "aura",
   "npmCommand": [

@@ -60,3 +60,28 @@ Help -> set vm options -Dawt.toolkit.name=WLToolkit
 * https://github.com/koekeishiya/yabai
 * https://github.com/koekeishiya/skhd
 * https://github.com/FelixKratz/SketchyBar
+
+## Hammerspoon
+Hammerspoon supports Pi desktop notifications, exact Alacritty window routing, and notification click handling.
+
+```sh
+brew install --cask hammerspoon
+```
+
+After installing:
+
+1. Start Hammerspoon and enable **Launch at Login**.
+2. Grant Hammerspoon access under **System Settings → Privacy & Security**:
+   - **Accessibility**
+   - **Notifications** (including sounds)
+   - **Automation → Dock**, if requested
+3. Reload the configuration from the Hammerspoon menu.
+4. Run `/reload` in Pi.
+
+Verify the bridge:
+
+```sh
+hs -c 'return piNotify.preflight()'
+```
+
+The output should include `"ok":true` and `"accessibility":true`. Configuration is stored in `~/.hammerspoon/`, and the Pi extension is under `~/.pi/agent/extensions/local/desktop-notifications/`.
