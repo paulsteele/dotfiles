@@ -3,6 +3,7 @@
   "defaultProvider": "litellm",
   "defaultModel": "amod-gpt-5.6-sol",
   "defaultThinkingLevel": "medium",
+  "enableSkillCommands": true,
   "tuiMode": "fullscreen",
   "litellm": {
     "skills": {
