@@ -1,8 +1,8 @@
 {
   "lastChangelogVersion": "0.84.2",
-  "defaultProvider": "litellm",
-  "defaultModel": "amod-gpt-5.6-sol",
-  "defaultThinkingLevel": "xhigh",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "medium",
   "enableSkillCommands": true,
   "tuiMode": "fullscreen",
   "litellm": {
@@ -16,8 +16,7 @@
     "npm:@gotgenes/pi-permission-system",
     "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:pi-provider-litellm",
-    "npm:@narumitw/pi-caffeinate"
+    "npm:pi-provider-litellm"
   ],
   "theme": "aura",
   "npmCommand": [
