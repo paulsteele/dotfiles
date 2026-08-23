@@ -27,17 +27,17 @@ window#waybar.hidden {
   color: #edecee;
 }
 #workspaces button.active {
-  color: #edecee;
-  background-color: #29263c;
+  color: #15141b;
+  background-color: #a277ff;
 }
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
-  color: #edecee;
-  background-color: #29263c;
+  color: #15141b;
+  background-color: #a277ff;
 }
 #workspaces button.urgent {
-  background-color: #29263c;
+  background-color: #ff6767;
 }
 #load,
 #systemd-failed-units,
