@@ -27,17 +27,17 @@ window#waybar.hidden {
   color: #edecee;
 }
 #workspaces button.active {
-  color: #15141b;
-  background-color: #a277ff;
+  color: #edecee;
+  background-color: #29263c;
 }
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
-  color: #15141b;
-  background-color: #a277ff;
+  color: #edecee;
+  background-color: #29263c;
 }
 #workspaces button.urgent {
-  background-color: #ff6767;
+  background-color: #29263c;
 }
 #load,
 #systemd-failed-units,
@@ -54,7 +54,7 @@ window#waybar.hidden {
   margin: 6px 3px;
   padding: 6px 12px;
   background-color: #29263c;
-  color: #15141b;
+  color: #edecee;
 }
 #custom-power {
   margin-right: 6px;
@@ -68,9 +68,9 @@ window#waybar.hidden {
   color: #a277ff;
 }
 
-/* Memory - orange/yellow for resource usage awareness */
+/* Keep regular modules visually consistent. */
 #memory {
-  background-color: #ffca85;
+  background-color: #29263c;
 }
 
 /* LLM widget - Aura status colors */
@@ -80,17 +80,11 @@ window#waybar.hidden {
   background-color: #29263c;
   color: #edecee;
 }
-#custom-llm.llama-running.webui-running {
-  background-color: #a277ff;
-  color: #15141b;
-}
-#custom-llm.llama-running.webui-stopped {
-  background-color: #82e2ff;
-  color: #15141b;
-}
+#custom-llm.llama-running.webui-running,
+#custom-llm.llama-running.webui-stopped,
 #custom-llm.llama-stopped.webui-running {
-  background-color: #61ffca;
-  color: #15141b;
+  background-color: #29263c;
+  color: #edecee;
 }
 
 /* Systemd units - green when ok, red when degraded */
@@ -103,25 +97,21 @@ window#waybar.hidden {
   color: #edecee;
 }
 
-/* Audio/volume - purple for media */
-#wireplumber {
-  background-color: #f694ff;
-}
+#wireplumber,
 #wireplumber.muted {
-  background-color: #6d6d6d;
+  background-color: #29263c;
   color: #edecee;
 }
 
-/* Load average - teal/cyan for system metrics */
 #load {
-  background-color: #61ffca;
+  background-color: #29263c;
   padding-right: 17px;
 }
 
-/* Clock - frost blue for time */
 #clock {
   font-family: MesloLGL Nerd Font;
-  background-color: #82e2ff;
+  background-color: #29263c;
+  color: #edecee;
 }
 
 /* Power button - Aura red */
@@ -130,41 +120,30 @@ window#waybar.hidden {
   color: #edecee;
 }
 #custom-updates {
-  background-color: #82e2ff;
+  background-color: #29263c;
 }
 
-/* Battery states */
-#battery {
-  background-color: #61ffca;
-}
-#battery.charging {
-  background-color: #61ffca;
-}
-#battery.warning:not(.charging) {
-  background-color: #ffca85;
-}
+#battery,
+#battery.charging,
+#battery.warning:not(.charging),
 #battery.critical:not(.charging) {
-  background-color: #ff6767;
+  background-color: #29263c;
   color: #edecee;
 }
 
-/* Backlight - warm yellow for brightness */
 #backlight {
-  background-color: #ffca85;
+  background-color: #29263c;
 }
 
-/* Network states */
-#network {
-  background-color: #a277ff;
-}
+#network,
 #network.disconnected {
-  background-color: #6d6d6d;
+  background-color: #29263c;
   color: #edecee;
 }
 
-/* Tray */
+/* Tray - deep indigo, so status icons sit comfortably in the Aura palette */
 #tray {
-  background-color: #6d6d6d;
+  background-color: #29263c;
   color: #edecee;
 }
 

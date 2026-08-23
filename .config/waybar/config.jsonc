@@ -98,7 +98,8 @@
     "wireplumber": {
         "format": "{icon}",
         "format-bluetooth": "󰂰",
-        "nospacing": 1,
+        "align": 0.5,
+        "justify": "center",
         "tooltip-format": "Volume : {volume}%",
         "format-muted": "󰝟",
         "format-icons": {
