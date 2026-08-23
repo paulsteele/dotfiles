@@ -1,7 +1,7 @@
 {
   "lastChangelogVersion": "0.84.2",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-sol",
+  "defaultProvider": "litellm",
+  "defaultModel": "amod-gpt-5.6-sol",
   "defaultThinkingLevel": "medium",
   "enableSkillCommands": true,
   "tuiMode": "fullscreen",
@@ -13,7 +13,7 @@
   "packages": [
     "npm:pi-llama-cpp",
     "npm:pi-web-access",
-    "npm:@gotgenes/pi-permission-system",
+    "npm:@gotgenes/pi-permission-system@26.3.1",
     "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-provider-litellm"

@@ -1,7 +1,10 @@
 {
   "debugLog": false,
   "permissionReviewLog": true,
-  "yoloMode": true,
+  "yoloMode": false,
+  "authorizerChain": [
+    "auto"
+  ],
   "permission": {
     "*": "ask",
     "path": {
@@ -46,6 +49,8 @@
     },
     "source_check": "allow",
     "get_search_content": "allow",
-    "external_directory": "ask"
+    "external_directory": {
+      "*": "ask"
+    }
   }
 }
