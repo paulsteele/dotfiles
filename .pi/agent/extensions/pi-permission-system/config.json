@@ -19,7 +19,8 @@
     "read": "allow",
     "write": {
       "*": "ask",
-      "PLAN.md": "allow"
+      "PLAN.md": "allow",
+      "plans/*.md": "allow"
     },
     "edit": {
       "*": "ask",

@@ -51,6 +51,10 @@
 /.pi/agent/*
 !/.pi/agent/settings.json
 !/.pi/agent/plannotator.json
+# Track custom themes selected by the shared Pi settings.
+!/.pi/agent/themes/
+/.pi/agent/themes/*
+!/.pi/agent/themes/aura.json
 # Track reproducible extension dependencies and local Bun patches, but never
 # installed dependency contents.
 !/.pi/agent/npm/
