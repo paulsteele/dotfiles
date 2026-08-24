@@ -1,0 +1,67 @@
+diff --git a/dist/discover.js b/dist/discover.js
+index 1b773a2329338e55f1b66cce46addfcb87e84295..10d353b2f1e390e550bae4f7d6dc2c79a594c641 100644
+--- a/dist/discover.js
++++ b/dist/discover.js
+@@ -138,15 +138,15 @@ function findCatalogModelInProvider(provider, lookupIds) {
+     return undefined;
+ }
+ function mapModelInfoCost(info, fallback) {
++    const input = finiteNumber(info.input_cost_per_token);
++    const output = finiteNumber(info.output_cost_per_token);
++    const cacheRead = finiteNumber(info.cache_read_input_token_cost);
++    const cacheWrite = finiteNumber(info.cache_creation_input_token_cost);
+     return {
+-        input: info.input_cost_per_token !== undefined ? info.input_cost_per_token * 1_000_000 : (fallback?.input ?? 0),
+-        output: info.output_cost_per_token !== undefined ? info.output_cost_per_token * 1_000_000 : (fallback?.output ?? 0),
+-        cacheRead: info.cache_read_input_token_cost !== undefined
+-            ? info.cache_read_input_token_cost * 1_000_000
+-            : (fallback?.cacheRead ?? 0),
+-        cacheWrite: info.cache_creation_input_token_cost !== undefined
+-            ? info.cache_creation_input_token_cost * 1_000_000
+-            : (fallback?.cacheWrite ?? 0),
++        input: input !== undefined ? input * 1_000_000 : (fallback?.input ?? 0),
++        output: output !== undefined ? output * 1_000_000 : (fallback?.output ?? 0),
++        cacheRead: cacheRead !== undefined ? cacheRead * 1_000_000 : (fallback?.cacheRead ?? 0),
++        cacheWrite: cacheWrite !== undefined ? cacheWrite * 1_000_000 : (fallback?.cacheWrite ?? 0),
+         ...(fallback?.tiers ? { tiers: fallback.tiers } : {}),
+     };
+ }
+@@ -385,7 +385,12 @@ function mapFromModelInfo(entry) {
+     if (!isChatStyleMode(info.mode))
+         return undefined;
+     const responsesMode = isResponsesMode(info.mode);
+-    const catalogModel = findCatalogModel(id);
++    // model_name is often a local alias. Resolve metadata from LiteLLM's
++    // canonical base/backend model before trying the alias itself.
++    const catalogModel = [info.base_model, entry.litellm_params?.model, id]
++        .filter((candidate) => typeof candidate === "string" && candidate.length > 0)
++        .map((candidate) => findCatalogModel(candidate))
++        .find((candidate) => candidate !== undefined);
+     const reasoningEffortMap = mapReasoningEfforts(info);
+     const thinkingLevelMap = catalogModel?.thinkingLevelMap || reasoningEffortMap
+         ? { ...catalogModel?.thinkingLevelMap, ...reasoningEffortMap }
+diff --git a/dist/types.d.ts b/dist/types.d.ts
+index c87eb486f37444220904bc80be1b261d5f9930dd..b5f3f943ab2839e14af97e6f15e05dcdac9370fa 100644
+--- a/dist/types.d.ts
++++ b/dist/types.d.ts
+@@ -22,12 +22,16 @@ export interface DiscoveryOptions {
+ }
+ export interface ModelInfoEntry {
+     model_name?: string;
++    litellm_params?: {
++        model?: string;
++    };
+     model_info?: {
+         mode?: string | null;
+-        input_cost_per_token?: number;
+-        output_cost_per_token?: number;
+-        cache_read_input_token_cost?: number;
+-        cache_creation_input_token_cost?: number;
++        base_model?: string | null;
++        input_cost_per_token?: number | null;
++        output_cost_per_token?: number | null;
++        cache_read_input_token_cost?: number | null;
++        cache_creation_input_token_cost?: number | null;
+         max_input_tokens?: number;
+         max_output_tokens?: number;
+         supports_reasoning?: boolean;

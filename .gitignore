@@ -51,6 +51,14 @@
 /.pi/agent/*
 !/.pi/agent/settings.json
 !/.pi/agent/plannotator.json
+# Track reproducible extension dependencies and local Bun patches, but never
+# installed dependency contents.
+!/.pi/agent/npm/
+/.pi/agent/npm/*
+!/.pi/agent/npm/package.json
+!/.pi/agent/npm/bun.lock
+!/.pi/agent/npm/patches/
+!/.pi/agent/npm/patches/*.patch
 !/.pi/agent/extensions/
 /.pi/agent/extensions/*
 # Personal Pi extensions live under one tracked, auto-discovered bundle.

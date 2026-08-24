@@ -1,0 +1,499 @@
+diff --git a/src/authority/authorizer-selection.ts b/src/authority/authorizer-selection.ts
+index 6d9b128..78656f6 100644
+--- a/src/authority/authorizer-selection.ts
++++ b/src/authority/authorizer-selection.ts
+@@ -136,7 +136,17 @@ export class AuthorizerSelection
+         continue;
+       }
+       resolved.push(name);
+-      links.push({ name, authorize: encloseInDelegationEnvelope(authorize) });
++      // Local auto-mode integration: the operator has explicitly named this
++      // link in authorizerChain, and the link itself is inert unless /auto is
++      // enabled. Let that one link adjudicate path/external_directory asks
++      // using the gate's complete PromptPayload instead of forcing every
++      // allow to defer. Every other authorizer remains inside the stock
++      // bounded-delegation envelope.
++      links.push({
++        name,
++        authorize:
++          name === "auto" ? authorize : encloseInDelegationEnvelope(authorize),
++      });
+     }
+     if (resolved.length > 0) {
+       this.deps.logger.review("authorizer_chain_resolved", {
+diff --git a/src/authority/forwarded-request-server.ts b/src/authority/forwarded-request-server.ts
+index f3ff874..392fd10 100644
+--- a/src/authority/forwarded-request-server.ts
++++ b/src/authority/forwarded-request-server.ts
+@@ -176,6 +176,8 @@ function buildServedDecisionEvent(
+   const facts = details.payload.request;
+   return {
+     requestId: details.requestId,
++    // A served forwarded ask has no tool row in this process.
++    toolCallId: null,
+     // The child's display projection, falling back to the payload's own facts
+     // for a version-skewed request that carried none. Both are non-nullable
+     // there, so the event's non-null contract holds without a sentinel.
+@@ -186,6 +188,10 @@ function buildServedDecisionEvent(
+     resolution: servedResolution(decision),
+     origin: null,
+     matchedPattern: null,
++    decidedBy: decision.decidedBy,
++    reason:
++      decision.denialReason ??
++      (decision.decidedBy.kind === "authorizer" ? decision.decidedBy.reason : null),
+     forwarding: details.forwarding ?? null,
+   };
+ }
+@@ -515,6 +521,7 @@ export class ForwardedRequestServer implements InboxProcessor {
+       return {
+         approved: false,
+         state: "denied",
++        denialReason: reason,
+         decidedBy: { kind: "gate_error", reason },
+       };
+     }
+diff --git a/src/handlers/gates/bash-external-directory.ts b/src/handlers/gates/bash-external-directory.ts
+index 2900201..b1839a6 100644
+--- a/src/handlers/gates/bash-external-directory.ts
++++ b/src/handlers/gates/bash-external-directory.ts
+@@ -123,6 +123,7 @@ export function describeBashExternalDirectoryGate(
+     decision: {
+       surface: "external_directory",
+       value: command,
++      toolCallId: tcc.toolCallId || null,
+     },
+     preCheck,
+   };
+diff --git a/src/handlers/gates/bash-path.ts b/src/handlers/gates/bash-path.ts
+index ca21ac3..7bc1ba0 100644
+--- a/src/handlers/gates/bash-path.ts
++++ b/src/handlers/gates/bash-path.ts
+@@ -153,6 +153,7 @@ export function describeBashPathGate(
+     decision: {
+       surface: "path",
+       value: worstToken,
++      toolCallId: tcc.toolCallId || null,
+     },
+     preCheck: worstCheck,
+   };
+diff --git a/src/handlers/gates/descriptor.ts b/src/handlers/gates/descriptor.ts
+index cf8008b..148f493 100644
+--- a/src/handlers/gates/descriptor.ts
++++ b/src/handlers/gates/descriptor.ts
+@@ -46,6 +46,7 @@ export interface GateDescriptor {
+   decision: {
+     surface: string;
+     value: string;
++    toolCallId: string | null;
+   };
+   /**
+    * When set, the gate has already resolved the permission state
+@@ -90,8 +91,8 @@ export interface GateBypass {
+   decidedBy: DecisionSource;
+   /** Optional review log entry to emit. */
+   log?: { event: string; details: Record<string, unknown> };
+-  /** Optional decision event to emit. */
+-  decision?: DecisionEventFacts;
++  /** Optional decision event to emit before requestId/provenance are stamped. */
++  decision?: Omit<DecisionEventFacts, "decidedBy" | "reason">;
+ }
+ 
+ /** Union of possible gate function return values. */
+diff --git a/src/handlers/gates/external-directory.ts b/src/handlers/gates/external-directory.ts
+index f812c3a..06b62be 100644
+--- a/src/handlers/gates/external-directory.ts
++++ b/src/handlers/gates/external-directory.ts
+@@ -57,6 +57,7 @@ export function describeExternalDirectoryGate(
+         },
+       },
+       decision: {
++        toolCallId: tcc.toolCallId || null,
+         surface: tcc.toolName,
+         value: externalDirectoryPath,
+         result: "allow",
+@@ -112,6 +113,7 @@ export function describeExternalDirectoryGate(
+     decision: {
+       surface: "external_directory",
+       value: externalDirectoryPath,
++      toolCallId: tcc.toolCallId || null,
+     },
+   };
+ }
+diff --git a/src/handlers/gates/helpers.ts b/src/handlers/gates/helpers.ts
+index 6e2b437..f0ace76 100644
+--- a/src/handlers/gates/helpers.ts
++++ b/src/handlers/gates/helpers.ts
+@@ -1,6 +1,7 @@
+ import type { AccessPath } from "#src/access-intent/access-path";
+ import { classifyToolKind } from "#src/access-intent/tool-kind";
+ import type { ForwardedAccessFacts } from "#src/authority/permission-forwarding";
++import type { DecisionSource } from "#src/authority/decision-source";
+ import type { PermissionDecisionResolution } from "#src/permission-events";
+ import type { PermissionCheckResult } from "#src/types";
+ import type { DecisionEventFacts } from "./descriptor";
+@@ -68,13 +69,16 @@ export function deriveDecisionValue(
+  * where it was minted.
+  */
+ export function buildDecisionEvent(
+-  decision: { surface: string; value: string },
+-  check: Pick<PermissionCheckResult, "origin" | "matchedPattern">,
++  decision: { surface: string; value: string; toolCallId: string | null },
++  check: Pick<PermissionCheckResult, "origin" | "matchedPattern" | "reason">,
+   agentName: string | null,
+   result: "allow" | "deny",
+   resolution: PermissionDecisionResolution,
++  decidedBy: DecisionSource,
++  reason?: string | null,
+ ): DecisionEventFacts {
+   return {
++    toolCallId: decision.toolCallId,
+     surface: decision.surface,
+     value: decision.value,
+     result,
+@@ -83,6 +87,8 @@ export function buildDecisionEvent(
+     origin: check.origin ?? null,
+     agentName: agentName ?? null,
+     matchedPattern: check.matchedPattern ?? null,
++    decidedBy,
++    reason: reason ?? check.reason ?? null,
+   };
+ }
+ 
+diff --git a/src/handlers/gates/path.ts b/src/handlers/gates/path.ts
+index 2f99641..7206344 100644
+--- a/src/handlers/gates/path.ts
++++ b/src/handlers/gates/path.ts
+@@ -77,6 +77,7 @@ export function describePathGate(
+     decision: {
+       surface: "path",
+       value: filePath,
++      toolCallId: tcc.toolCallId || null,
+     },
+     preCheck: check,
+   };
+diff --git a/src/handlers/gates/runner.ts b/src/handlers/gates/runner.ts
+index 1497559..e83089f 100644
+--- a/src/handlers/gates/runner.ts
++++ b/src/handlers/gates/runner.ts
+@@ -1,4 +1,5 @@
+ import type { AskEscalator } from "#src/authority/authorizer-selection";
++import type { DecisionSource } from "#src/authority/decision-source";
+ import type { PermissionPromptDecision } from "#src/authority/permission-dialog";
+ import type { DecisionReporter } from "#src/decision-reporter";
+ import { applyPermissionGate } from "#src/permission-gate";
+@@ -70,7 +71,11 @@ export class GateRunner {
+         });
+       }
+       if (gate.decision) {
+-        this.emitDecision(requestId, gate.decision);
++        this.emitDecision(requestId, {
++          ...gate.decision,
++          decidedBy: gate.decidedBy,
++          reason: null,
++        });
+       }
+       return { action: "allow" };
+     }
+@@ -149,6 +154,11 @@ export class GateRunner {
+           agentName,
+           "allow",
+           "session_approved",
++          {
++            kind: "session_approval",
++            surface: descriptor.surface,
++            pattern: check.matchedPattern ?? null,
++          },
+         ),
+       );
+       return { action: "allow" };
+@@ -175,6 +185,7 @@ export class GateRunner {
+           agentName,
+           "allow",
+           deriveResolution(yoloGrant.state, "allow", false, false, true),
++          { kind: "yolo", pattern: check.matchedPattern ?? null },
+         ),
+       );
+       return { action: "allow" };
+@@ -197,6 +208,7 @@ export class GateRunner {
+ 
+     let autoApproved = false;
+     let confirmationUnavailable = false;
++    let promptedDecision: PermissionPromptDecision | undefined;
+     const gateResult = await applyPermissionGate({
+       state: check.state,
+       sessionApproval: descriptor.sessionApproval?.toGateApproval(),
+@@ -211,6 +223,7 @@ export class GateRunner {
+         });
+         autoApproved = decision.autoApproved === true;
+         confirmationUnavailable = decision.confirmationUnavailable === true;
++        promptedDecision = decision;
+         return decision;
+       },
+       writeLog: (event, details) =>
+@@ -229,6 +242,17 @@ export class GateRunner {
+     const hasSessionApproval =
+       gateResult.action === "allow" && gateResult.sessionApproval !== undefined;
+ 
++    const ruleDecision: DecisionSource = {
++      kind: "rule",
++      surface: descriptor.surface,
++      pattern: check.matchedPattern ?? null,
++      origin: check.origin,
++    };
++    const decidedBy = promptedDecision?.decidedBy ?? ruleDecision;
++    const decisionReason =
++      promptedDecision?.denialReason ??
++      (decidedBy.kind === "authorizer" ? decidedBy.reason : null);
++
+     // 5. Emit decision event
+     this.emitDecision(
+       requestId,
+@@ -244,6 +268,8 @@ export class GateRunner {
+           confirmationUnavailable,
+           autoApproved,
+         ),
++        decidedBy,
++        decisionReason,
+       ),
+     );
+ 
+diff --git a/src/handlers/gates/skill-input.ts b/src/handlers/gates/skill-input.ts
+index 0979685..aeda9db 100644
+--- a/src/handlers/gates/skill-input.ts
++++ b/src/handlers/gates/skill-input.ts
+@@ -35,6 +35,7 @@ export function describeSkillInputGate(
+     decision: {
+       surface: "skill",
+       value: skillName,
++      toolCallId: null,
+     },
+   };
+ }
+diff --git a/src/handlers/gates/skill-read.ts b/src/handlers/gates/skill-read.ts
+index a78711b..b826d73 100644
+--- a/src/handlers/gates/skill-read.ts
++++ b/src/handlers/gates/skill-read.ts
+@@ -67,6 +67,7 @@ export function describeSkillReadGate(
+     decision: {
+       surface: "skill",
+       value: matchedSkill.name,
++      toolCallId: tcc.toolCallId || null,
+     },
+     preResolved: {
+       state: matchedSkill.state,
+diff --git a/src/handlers/gates/tool.ts b/src/handlers/gates/tool.ts
+index a83636a..6aecd59 100644
+--- a/src/handlers/gates/tool.ts
++++ b/src/handlers/gates/tool.ts
+@@ -136,6 +136,7 @@ export function describeToolGate(
+     decision: {
+       surface: gateSurface,
+       value: decisionValue,
++      toolCallId: tcc.toolCallId || null,
+     },
+   };
+ }
+diff --git a/src/handlers/tool-call-boundary.ts b/src/handlers/tool-call-boundary.ts
+index 760a6af..c85af8c 100644
+--- a/src/handlers/tool-call-boundary.ts
++++ b/src/handlers/tool-call-boundary.ts
+@@ -96,6 +96,7 @@ function recordGateError(
+     });
+     reporter.emitDecision({
+       requestId,
++      toolCallId: bestEffortToolCallId(event),
+       surface: toolName,
+       value: command ?? toolName,
+       result: "deny",
+@@ -103,6 +104,8 @@ function recordGateError(
+       origin: null,
+       agentName: null,
+       matchedPattern: null,
++      decidedBy: { kind: "gate_error", reason },
++      reason,
+     });
+   } catch {
+     // The block is the guarantee; its bookkeeping is not.
+@@ -111,6 +114,12 @@ function recordGateError(
+ 
+ // ── Defensive event readers (never throw) ──────────────────────────────────
+ 
++/** Best-effort host tool-call id from a raw event; never throws. */
++function bestEffortToolCallId(event: unknown): string | null {
++  const value = toRecord(event).toolCallId;
++  return typeof value === "string" && value ? value : null;
++}
++
+ /** Best-effort tool name from a raw event; never throws. */
+ function bestEffortToolName(event: unknown): string {
+   const record = toRecord(event);
+diff --git a/src/permission-events.ts b/src/permission-events.ts
+index 8ebabee..8d645cb 100644
+--- a/src/permission-events.ts
++++ b/src/permission-events.ts
+@@ -8,6 +8,7 @@
+  * removed or renamed without a semver-major version bump.
+  */
+ 
++import type { DecisionSource } from "#src/authority/decision-source";
+ import type { PromptRequestFacts } from "#src/presentation/prompt-payload";
+ 
+ /** Minimal event bus interface required by the emit helpers. */
+@@ -73,6 +74,8 @@ export interface ForwardedPromptContext {
+ export interface PermissionUiPromptEvent {
+   /** Unique ID for the permission request being prompted. */
+   requestId: string;
++  /** Host tool-call id for correlation, or null for skill/served-forwarded asks. */
++  toolCallId: string | null;
+   /** Prompt origin. */
+   source: PermissionUiPromptSource;
+   /** Normalized display surface (e.g. "bash", "skill"), when known. */
+@@ -122,6 +125,8 @@ export interface PermissionDecisionEvent {
+    * runs several gates and so raises several requests.
+    */
+   requestId: string;
++  /** Host tool-call id for correlation, or null for skill/served-forwarded asks. */
++  toolCallId: string | null;
+   /** Permission surface: "bash", "read", "mcp", "skill", "external_directory", etc. */
+   surface: string;
+   /** The value that was evaluated (command, tool name, skill name, path). */
+@@ -136,6 +141,10 @@ export interface PermissionDecisionEvent {
+   agentName: string | null;
+   /** Matched pattern from the winning rule (when available). */
+   matchedPattern: string | null;
++  /** The authoritative provenance stamped by the site that decided. */
++  decidedBy: DecisionSource;
++  /** Bounded operator/authorizer/policy/error explanation when one exists. */
++  reason: string | null;
+   /**
+    * Forwarding context for a decision this session made while serving another
+    * session's forwarded request; absent on an ordinary local decision.
+@@ -190,9 +199,27 @@ export function emitDecisionEvent(
+   event: PermissionDecisionEvent,
+ ): void {
+   try {
+-    events.emit(PERMISSIONS_DECISION_CHANNEL, event);
++    events.emit(PERMISSIONS_DECISION_CHANNEL, {
++      ...event,
++      reason: boundDecisionReason(event.reason),
++    });
+   } catch {
+     // Broadcasts are best-effort. A throwing listener must not block the
+     // permission gate from resolving.
+   }
+ }
++
++const MAX_DECISION_REASON_CHARS = 500;
++
++function boundDecisionReason(value: string | null): string | null {
++  if (typeof value !== "string") return null;
++  const clean = value
++    .replace(/\u001b(?:\[[0-?]*[ -/]*[@-~]|\][^\u0007]*(?:\u0007|\u001b\\))/g, "")
++    .replace(/[\u0000-\u001f\u007f-\u009f]/g, " ")
++    .replace(/\s+/g, " ")
++    .trim();
++  if (!clean) return null;
++  return clean.length <= MAX_DECISION_REASON_CHARS
++    ? clean
++    : `${clean.slice(0, MAX_DECISION_REASON_CHARS - 1)}…`;
++}
+diff --git a/src/permission-ui-prompt.ts b/src/permission-ui-prompt.ts
+index 4849a64..be83b10 100644
+--- a/src/permission-ui-prompt.ts
++++ b/src/permission-ui-prompt.ts
+@@ -24,6 +24,7 @@ export interface DirectPromptInput {
+   agentName: string | null;
+   /** The ask's complete payload; the event carries its invariant core alone. */
+   payload: PromptPayload;
++  toolCallId?: string;
+   toolName?: string;
+   skillName?: string;
+   path?: string;
+@@ -60,6 +61,7 @@ export interface UiPromptInput extends DirectPromptInput {
+ export function buildUiPrompt(input: UiPromptInput): PermissionUiPromptEvent {
+   return {
+     requestId: input.requestId,
++    toolCallId: input.toolCallId ?? null,
+     source: input.source,
+     surface: input.surface !== undefined ? input.surface : directSurface(input),
+     value: input.value !== undefined ? input.value : directValue(input),
+diff --git a/src/service.ts b/src/service.ts
+index 889b09d..bea2387 100644
+--- a/src/service.ts
++++ b/src/service.ts
+@@ -20,6 +20,7 @@ export type {
+   Authorizer,
+   AuthorizerVerdict,
+ } from "./authority/authorizer";
++export type { DecisionSource } from "./authority/decision-source";
+ 
+ /**
+  * The narrow review-log seam handed to a chain link at `authorize` time
+diff --git a/dist/public.d.ts b/dist/public.d.ts
+index 0bc42b2..4d0b09d 100644
+--- a/dist/public.d.ts
++++ b/dist/public.d.ts
+@@ -200,6 +200,8 @@ interface ForwardedPromptContext {
+ interface PermissionUiPromptEvent {
+     /** Unique ID for the permission request being prompted. */
+     requestId: string;
++    /** Host tool-call id for correlation, or null for standalone asks. */
++    toolCallId: string | null;
+     /** Prompt origin. */
+     source: PermissionUiPromptSource;
+     /** Normalized display surface (e.g. "bash", "skill"), when known. */
+@@ -236,6 +238,8 @@ interface PermissionDecisionEvent {
+      * runs several gates and so raises several requests.
+      */
+     requestId: string;
++    /** Host tool-call id for correlation, or null for standalone asks. */
++    toolCallId: string | null;
+     /** Permission surface: "bash", "read", "mcp", "skill", "external_directory", etc. */
+     surface: string;
+     /** The value that was evaluated (command, tool name, skill name, path). */
+@@ -250,6 +254,10 @@ interface PermissionDecisionEvent {
+     agentName: string | null;
+     /** Matched pattern from the winning rule (when available). */
+     matchedPattern: string | null;
++    /** Authoritative provenance stamped by the deciding path. */
++    decidedBy: DecisionSource;
++    /** Bounded operator/authorizer/policy/error explanation when one exists. */
++    reason: string | null;
+     /**
+      * Forwarding context for a decision this session made while serving another
+      * session's forwarded request; absent on an ordinary local decision.
+@@ -382,6 +390,27 @@ type AuthorizerVerdict = {
+ interface Authorizer {
+     authorize(details: PromptPermissionDetails, query: PermissionQuery, log: AuthorizerLog): Promise<AuthorizerVerdict>;
+ }
++type DecisionSource = {
++    kind: "user";
++    via: "dialog" | "select";
++} | {
++    kind: "authorizer";
++    name: string;
++    verdict: "allow" | "deny";
++    reason: string | null;
++} | {
++    kind: "rule";
++    surface: string;
++    pattern: string | null;
++    origin: string | null;
++} | {
++    kind: "session_approval";
++    surface: string;
++    pattern: string | null;
++} | {
++    kind: "yolo";
++    pattern: string | null;
++} | { kind: "infrastructure_read" } | { kind: "unavailable"; reason: string } | { kind: "gate_error"; reason: string } | { kind: "forwarded"; responderSessionId: string | null; decision: DecisionSource | null };
+ 
+ /**
+  * Registry for custom tool access-intent extractors.
+@@ -562,4 +591,4 @@ declare function getPermissionsService(): PermissionsService | undefined;
+ declare function unpublishPermissionsService(service: PermissionsService): void;
+ 
+ export { PERMISSIONS_DECISION_CHANNEL, PERMISSIONS_READY_CHANNEL, PERMISSIONS_UI_PROMPT_CHANNEL, getPermissionsService, publishPermissionsService, unpublishPermissionsService };
+-export type { Authorizer, AuthorizerLog, AuthorizerVerdict, ForwardedPromptContext, PermissionCheckResult, PermissionDecisionEvent, PermissionQuery, PermissionState, PermissionUiPromptEvent, PermissionUiPromptSource, PermissionsReadyEvent, PermissionsService, PromptAnnotation, PromptEvidence, PromptPayload, PromptPayloadKind, PromptPermissionDetails, PromptRequestFacts, PromptRequester, ToolInputFormatter };
++export type { Authorizer, AuthorizerLog, AuthorizerVerdict, DecisionSource, ForwardedPromptContext, PermissionCheckResult, PermissionDecisionEvent, PermissionQuery, PermissionState, PermissionUiPromptEvent, PermissionUiPromptSource, PermissionsReadyEvent, PermissionsService, PromptAnnotation, PromptEvidence, PromptPayload, PromptPayloadKind, PromptPermissionDetails, PromptRequestFacts, PromptRequester, ToolInputFormatter };
