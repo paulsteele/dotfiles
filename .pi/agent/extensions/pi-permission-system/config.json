@@ -1,10 +1,4 @@
 {
-  "debugLog": false,
-  "permissionReviewLog": true,
-  "yoloMode": false,
-  "authorizerChain": [
-    "auto"
-  ],
   "permission": {
     "*": "ask",
     "path": {
@@ -50,8 +44,19 @@
     },
     "source_check": "allow",
     "get_search_content": "allow",
-    "external_directory": {
-      "*": "ask"
+    "external_directory": { "*": "ask" },
+    "skill": "ask"
+  },
+  "auto": {
+    "provider": "litellm",
+    "model": "amod-gpt-5.6-luna",
+    "enabledByDefault": true,
+    "timeoutMs": 20000,
+    "contextUserTurns": 3,
+    "environment": {
+      "trustedRoots": [],
+      "trustedRemotes": [],
+      "trustedDomains": []
     }
   }
 }

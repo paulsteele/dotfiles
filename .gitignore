@@ -68,6 +68,7 @@
 # Personal Pi extensions live under one tracked, auto-discovered bundle.
 !/.pi/agent/extensions/local/
 !/.pi/agent/extensions/local/**
+/.pi/agent/extensions/local/**/node_modules/
 !.pi/agent/extensions/pi-permission-system/
 /.pi/agent/extensions/pi-permission-system/*
 !.pi/agent/extensions/pi-permission-system/config.json

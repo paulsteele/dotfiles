@@ -13,7 +13,6 @@
   "packages": [
     "npm:pi-llama-cpp",
     "npm:pi-web-access",
-    "npm:@gotgenes/pi-permission-system@26.3.1",
     "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-provider-litellm@2.1.0"
