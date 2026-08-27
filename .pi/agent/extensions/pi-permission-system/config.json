@@ -44,7 +44,9 @@
     },
     "source_check": "allow",
     "get_search_content": "allow",
-    "external_directory": { "*": "ask" },
+    "external_directory": {
+      "*": "ask"
+    },
     "skill": "ask"
   },
   "auto": {
