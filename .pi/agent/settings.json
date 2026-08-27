@@ -15,7 +15,8 @@
     "npm:pi-web-access",
     "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:pi-provider-litellm@2.1.0"
+    "npm:pi-provider-litellm@2.1.0",
+    "https://github.com/paulsteele/personal-pi@v1.0.0"
   ],
   "theme": "aura",
   "npmCommand": [

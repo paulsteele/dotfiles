@@ -65,10 +65,8 @@
 !/.pi/agent/npm/patches/*.patch
 !/.pi/agent/extensions/
 /.pi/agent/extensions/*
-# Personal Pi extensions live under one tracked, auto-discovered bundle.
-!/.pi/agent/extensions/local/
-!/.pi/agent/extensions/local/**
-/.pi/agent/extensions/local/**/node_modules/
+# Keep personal extension runtime policy in dotfiles; source is installed from
+# the pinned personal-pi package in Pi settings.
 !.pi/agent/extensions/pi-permission-system/
 /.pi/agent/extensions/pi-permission-system/*
 !.pi/agent/extensions/pi-permission-system/config.json

@@ -84,4 +84,22 @@ Verify the bridge:
 hs -c 'return piNotify.preflight()'
 ```
 
-The output should include `"ok":true` and `"accessibility":true`. Configuration is stored in `~/.hammerspoon/`, and the Pi extension is under `~/.pi/agent/extensions/local/desktop-notifications/`.
+The output should include `"ok":true` and `"accessibility":true`. The Hammerspoon bridge remains under `~/.hammerspoon/`; the TypeScript extension is installed from the pinned [`paulsteele/personal-pi`](https://github.com/paulsteele/personal-pi) package.
+
+## Pi extensions
+
+Personal Pi extensions are distributed as one public package with five ordered extension entries. The source is maintained separately in `~/personal/pi-extensions`; runtime Permission System policy stays in this dotfiles repository.
+
+The pinned package source is recorded in `~/.pi/agent/settings.json`. On a new online machine, applying these dotfiles and starting Pi installs the missing package and dependencies automatically. Confirm it with:
+
+```sh
+pi list
+```
+
+After changing the pinned tag, or when reconciling an existing machine, run:
+
+```sh
+pi update --extensions
+```
+
+To roll back, restore the previous `@vX.Y.Z` tag in `~/.pi/agent/settings.json` and run the same update command. Pi reconciles pinned Git refs but does not advance them automatically.
