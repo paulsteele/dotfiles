@@ -10,6 +10,11 @@
       "enabled": false
     }
   },
+  "retry": {
+    "enabled": true,
+    "maxRetries": 10,
+    "baseDelayMs": 60000
+  },
   "packages": [
     "npm:pi-llama-cpp",
     "npm:pi-web-access",

@@ -5,11 +5,11 @@
     "": {
       "name": "pi-extensions",
       "dependencies": {
-        "@juicesharp/rpiv-ask-user-question": "^2.7.1",
+        "@juicesharp/rpiv-ask-user-question": "^2.8.0",
         "@plannotator/pi-extension": "^0.27.9",
-        "pi-llama-cpp": "^0.9.2",
+        "pi-llama-cpp": "^0.10.0",
         "pi-provider-litellm": "2.1.0",
-        "pi-web-access": "^0.26.0",
+        "pi-web-access": "^0.27.0",
       },
     },
   },
@@ -87,9 +87,9 @@
 
     "@joplin/turndown-plugin-gfm": ["@joplin/turndown-plugin-gfm@1.0.67", "", {}, "sha512-FZfW5EZfidhzd1IaY1uxHnIZPTVOxAdleMZ4/1U6Nt5b7+Qj5JThDnaIomuJtetnUBzuRNbe9FWMuqD4B3dlWA=="],
 
-    "@juicesharp/rpiv-ask-user-question": ["@juicesharp/rpiv-ask-user-question@2.7.1", "", { "dependencies": { "@juicesharp/rpiv-config": "^2.7.1", "typebox": "^1.1.24" }, "peerDependencies": { "@earendil-works/pi-coding-agent": "*", "@earendil-works/pi-tui": "*", "@juicesharp/rpiv-i18n": "*" }, "optionalPeers": ["@juicesharp/rpiv-i18n"] }, "sha512-S4muZ/IbQ5M3xRX49b2r1CfxdkMmREjq+gv9j4qnyZ0BaEHNHTJ61NIerRzgmYt4FeteXqJB8XV3x8pZvq/GGg=="],
+    "@juicesharp/rpiv-ask-user-question": ["@juicesharp/rpiv-ask-user-question@2.8.0", "", { "dependencies": { "@juicesharp/rpiv-config": "^2.8.0", "typebox": "^1.1.24" }, "peerDependencies": { "@earendil-works/pi-coding-agent": "*", "@earendil-works/pi-tui": "*", "@juicesharp/rpiv-i18n": "*" }, "optionalPeers": ["@juicesharp/rpiv-i18n"] }, "sha512-5ogx/hpumPw559clQxwpqC8lXXMqwf/1IxeyU80r3ELUp+w/VRr27XgA7R/8NkIs3FxKN0X7Xl4r8Z7nsr36jA=="],
 
-    "@juicesharp/rpiv-config": ["@juicesharp/rpiv-config@2.7.1", "", { "dependencies": { "typebox": "^1.1.24" } }, "sha512-6X1nHd8OQthbgGhkStaNxOMrUzFBjf2dKqYRgo4vjeGxr0hKvGgxVPE233kXiZNtGUTK3t+IfsbfIw2X07Q5Pg=="],
+    "@juicesharp/rpiv-config": ["@juicesharp/rpiv-config@2.8.0", "", { "dependencies": { "typebox": "^1.1.24" } }, "sha512-mVQWnXw3CO8B8X4eRXq7kwkmcAjsdYOhqpS+zyTteoiipF0z/wV49kSGIN9lOpF6D2Rb1fcXiaZciFBaE+vsVg=="],
 
     "@mariozechner/clipboard": ["@mariozechner/clipboard@0.3.9", "", { "optionalDependencies": { "@mariozechner/clipboard-darwin-arm64": "0.3.9", "@mariozechner/clipboard-darwin-universal": "0.3.9", "@mariozechner/clipboard-darwin-x64": "0.3.9", "@mariozechner/clipboard-linux-arm64-gnu": "0.3.9", "@mariozechner/clipboard-linux-arm64-musl": "0.3.9", "@mariozechner/clipboard-linux-riscv64-gnu": "0.3.9", "@mariozechner/clipboard-linux-x64-gnu": "0.3.9", "@mariozechner/clipboard-linux-x64-musl": "0.3.9", "@mariozechner/clipboard-win32-arm64-msvc": "0.3.9", "@mariozechner/clipboard-win32-x64-msvc": "0.3.9" } }, "sha512-ABnA53mdfkGZwOFUdZNv2S0CWGO/EIuPj8Vv9xmBFmSYg/qFc7ihO6q5FcQjvoE67kZpWkEc4AhD6B/os04yuA=="],
 
@@ -515,11 +515,11 @@
 
     "path-scurry": ["path-scurry@2.0.2", "", { "dependencies": { "lru-cache": "^11.0.0", "minipass": "^7.1.2" } }, "sha512-3O/iVVsJAPsOnpwWIeD+d6z/7PmqApyQePUtCndjatj/9I5LylHvt5qluFaBT3I5h3r1ejfR056c+FCv+NnNXg=="],
 
-    "pi-llama-cpp": ["pi-llama-cpp@0.9.2", "", { "peerDependencies": { "@earendil-works/pi-ai": ">=0.84.0", "@earendil-works/pi-coding-agent": ">=0.84.0", "@earendil-works/pi-tui": ">=0.84.0" } }, "sha512-B2+oitxi/vc1GIvJLsR+wGjA2hnTB1YX0lUHs4TrfYN0fel3b3X6JdrmeFjv/VD6ZMldrXEFau9cdBdrhFkj/A=="],
+    "pi-llama-cpp": ["pi-llama-cpp@0.10.0", "", { "peerDependencies": { "@earendil-works/pi-ai": ">=0.84.0", "@earendil-works/pi-coding-agent": ">=0.84.0", "@earendil-works/pi-tui": ">=0.84.0" } }, "sha512-Zsi6T1c18yWQoa1akfAVazT3bSxxTg5P8fRv22hSLiJsNEZGFzx1b8XypGkx57JFvuCDzrkzDou+JOCkZb3y+w=="],
 
     "pi-provider-litellm": ["pi-provider-litellm@2.1.0", "", { "peerDependencies": { "@earendil-works/pi-ai": ">=0.81.0", "@earendil-works/pi-coding-agent": ">=0.81.0" }, "optionalPeers": ["@earendil-works/pi-ai", "@earendil-works/pi-coding-agent"] }, "sha512-BRsXajpPkpHgTVE6+5rMV5Cg+tntsJ7HuPN66YaCzwmIFCrcKgnhefjZyGga9Fg8f7rUxb387H1Hy1A6wYiCHw=="],
 
-    "pi-web-access": ["pi-web-access@0.26.0", "", { "dependencies": { "@mozilla/readability": "^0.6.0", "defuddle": "0.19.3", "linkedom": "^0.16.0", "p-limit": "^6.1.0", "promise.try": "^2.0.1", "turndown": "^7.2.0", "typebox": "^1.1.38", "undici": "^8.9.0", "unpdf": "^1.6.2" }, "peerDependencies": { "@earendil-works/pi-ai": "*", "@earendil-works/pi-coding-agent": "*", "@earendil-works/pi-tui": "*" } }, "sha512-ob24VPqSx6/WjK4k2IQzwBtI+m9TiL2lSFKEdTTJdCeW6D7Sd1z/RlwFUD+nPD45yo6mURTiJQ8GUN6Lhi8YJw=="],
+    "pi-web-access": ["pi-web-access@0.27.0", "", { "dependencies": { "@mozilla/readability": "^0.6.0", "defuddle": "0.19.3", "linkedom": "^0.16.0", "p-limit": "^6.1.0", "promise.try": "^2.0.1", "turndown": "^7.2.0", "typebox": "^1.1.38", "undici": "^8.9.0", "unpdf": "^1.6.2" }, "peerDependencies": { "@earendil-works/pi-ai": "*", "@earendil-works/pi-coding-agent": "*", "@earendil-works/pi-tui": "*" } }, "sha512-D/z7ILwbnJeDjzFPC1j3G1OvO+j2vl2H13ByYcH5FLbrJ1yBdbBwTBcl96Bbt2NEqH5vdmoZ/EpbDG8BTF9W7Q=="],
 
     "possible-typed-array-names": ["possible-typed-array-names@1.1.0", "", {}, "sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg=="],
 
