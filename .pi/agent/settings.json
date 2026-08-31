@@ -12,8 +12,8 @@
   },
   "retry": {
     "enabled": true,
-    "maxRetries": 10,
-    "baseDelayMs": 60000
+    "maxRetries": 7,
+    "baseDelayMs": 20000
   },
   "packages": [
     "npm:pi-llama-cpp",
