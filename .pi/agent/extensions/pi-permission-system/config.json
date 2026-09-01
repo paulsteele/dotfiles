@@ -23,6 +23,7 @@
     },
     "plannotator_submit_plan": "allow",
     "ask_user_question": "allow",
+    "fetch_content": "allow",
     "bash": {
       "*": "ask",
       "ls *": "allow",

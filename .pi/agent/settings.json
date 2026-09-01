@@ -1,7 +1,7 @@
 {
   "lastChangelogVersion": "0.84.3",
   "defaultProvider": "litellm",
-  "defaultModel": "amod-gpt-5.6-sol",
+  "defaultModel": "amod-claude-opus-5",
   "defaultThinkingLevel": "high",
   "enableSkillCommands": true,
   "tuiMode": "fullscreen",
