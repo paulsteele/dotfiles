@@ -41,7 +41,13 @@
       "nl *": "allow",
       "sed -n *": "allow",
       "printf *": "allow",
-      "true": "allow"
+      "true": "allow",
+      "kubectl get *": "ask",
+      "kubectl describe *": "ask",
+      "kubectl log *": "ask",
+      "kubectl *": "ask",
+      "helm *": "ask",
+      "helmfile *": "ask"
     },
     "source_check": "allow",
     "get_search_content": "allow",
