@@ -52,9 +52,14 @@
     "source_check": "allow",
     "get_search_content": "allow",
     "external_directory": {
-      "*": "ask"
+      "*": "ask",
+      "~/.pi/agent/npm/node_modules/@plannotator/pi-extension/skills/*": "allow",
+      "~/.bun/install/global/node_modules/@earendil-works/pi-coding-agent/*": "allow"
     },
-    "skill": "ask"
+    "skill": {
+      "*": "ask",
+      "plannotator*": "allow"
+    }
   },
   "auto": {
     "provider": "litellm",
