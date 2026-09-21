@@ -22,6 +22,8 @@
       "plans/*": "allow"
     },
     "plannotator_submit_plan": "allow",
+    "submit_result": "allow",
+    "coverage_state": "allow",
     "ask_user_question": "allow",
     "fetch_content": "allow",
     "bash": {
@@ -54,7 +56,8 @@
     "external_directory": {
       "*": "ask",
       "~/.pi/agent/npm/node_modules/@plannotator/pi-extension/skills/*": "allow",
-      "~/.bun/install/global/node_modules/@earendil-works/pi-coding-agent/*": "allow"
+      "~/.bun/install/global/node_modules/@earendil-works": "allow",
+      "~/.bun/install/global/node_modules/@earendil-works/*": "allow"
     },
     "skill": {
       "*": "ask",
