@@ -24,6 +24,11 @@
     "plannotator_submit_plan": "allow",
     "submit_result": "allow",
     "coverage_state": "allow",
+    "list_changes": "allow",
+    "read_change": "allow",
+    "read_source_page": "allow",
+    "search_source": "allow",
+    "list_source": "allow",
     "ask_user_question": "allow",
     "fetch_content": "allow",
     "bash": {
