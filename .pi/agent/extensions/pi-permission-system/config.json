@@ -37,6 +37,8 @@
     "record_checkpoint": "allow",
     "record_groups": "allow",
     "report_blocker": "allow",
+    "quality_response": "allow",
+    "pr_review": "deny",
     "ask_user_question": "allow",
     "fetch_content": "allow",
     "bash": {
@@ -79,7 +81,7 @@
   },
   "auto": {
     "provider": "litellm",
-    "model": "amod-gpt-5.6-luna",
+    "model": "amod-gpt-6-luna",
     "enabledByDefault": true,
     "timeoutMs": 20000,
     "contextUserTurns": 3,
