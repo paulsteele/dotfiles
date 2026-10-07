@@ -22,6 +22,7 @@
       "plans/*": "allow"
     },
     "plannotator_submit_plan": "allow",
+    "plannotator_mark_done": "allow",
     "submit_result": "allow",
     "coverage_state": "allow",
     "list_changes": "allow",
@@ -39,6 +40,7 @@
     "report_blocker": "allow",
     "quality_response": "allow",
     "pr_review": "deny",
+    "pr_review_result": "allow",
     "ask_user_question": "allow",
     "fetch_content": "allow",
     "bash": {
