@@ -81,16 +81,9 @@
       "plannotator*": "allow"
     }
   },
-  "auto": {
-    "provider": "litellm",
-    "model": "amod-gpt-6-luna",
-    "enabledByDefault": true,
-    "timeoutMs": 20000,
-    "contextUserTurns": 3,
-    "environment": {
-      "trustedRoots": [],
-      "trustedRemotes": [],
-      "trustedDomains": []
-    }
+  "sandbox": {
+    "modelAssistedSetup": false,
+    "hostEnvironment": [],
+    "startupTimeoutMs": 120000
   }
 }

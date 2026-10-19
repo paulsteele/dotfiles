@@ -67,9 +67,9 @@
 /.pi/agent/extensions/*
 # Keep personal extension runtime policy in dotfiles; source is installed from
 # the pinned personal-pi package in Pi settings.
-!.pi/agent/extensions/pi-permission-system/
-/.pi/agent/extensions/pi-permission-system/*
-!.pi/agent/extensions/pi-permission-system/config.json
+!.pi/agent/extensions/pi-devcontainer-sandbox/
+/.pi/agent/extensions/pi-devcontainer-sandbox/*
+!.pi/agent/extensions/pi-devcontainer-sandbox/config.json
 
 # downloaded spell files
 .config/nvim/spell/en.utf-8.sug
