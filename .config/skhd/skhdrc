@@ -1,5 +1,5 @@
 # open terminal
-cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty --working-directory ~
+cmd - return : open -na Ghostty --args --working-directory="$HOME"
 
 # Disable Cmd + Q
 cmd - q : :

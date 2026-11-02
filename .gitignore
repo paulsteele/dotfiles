@@ -39,6 +39,7 @@
 /.config/git/*
 !/.config/git/ignore
 !/.config/zypper-autoupdates
+!/.config/ghostty/
 
 # Hammerspoon bridge for Pi desktop notifications
 !/.hammerspoon/
