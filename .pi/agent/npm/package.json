@@ -2,11 +2,11 @@
   "name": "pi-extensions",
   "private": true,
   "dependencies": {
-    "@juicesharp/rpiv-ask-user-question": "^2.13.9",
-    "@plannotator/pi-extension": "^0.28.23",
-    "pi-llama-cpp": "^0.18.1",
+    "@juicesharp/rpiv-ask-user-question": "^2.15.0",
+    "@plannotator/pi-extension": "^0.28.38",
+    "pi-llama-cpp": "^0.20.0",
     "pi-provider-litellm": "2.1.0",
-    "pi-web-access": "^0.42.0"
+    "pi-web-access": "^0.46.0"
   },
   "patchedDependencies": {
     "pi-provider-litellm@2.1.0": "patches/pi-provider-litellm@2.1.0.patch"

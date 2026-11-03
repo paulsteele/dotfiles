@@ -84,6 +84,7 @@
   "sandbox": {
     "modelAssistedSetup": false,
     "hostEnvironment": [],
-    "startupTimeoutMs": 120000
+    "startupTimeoutMs": 120000,
+    "buildTimeoutMs": 1800000
   }
 }

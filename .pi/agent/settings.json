@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "1.3.0",
-  "defaultProvider": "litellm",
-  "defaultModel": "amod-claude-opus-5-5",
-  "defaultThinkingLevel": "high",
+  "lastChangelogVersion": "1.4.0",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-6.1-sol",
+  "defaultThinkingLevel": "xhigh",
   "enableSkillCommands": true,
   "tuiMode": "fullscreen",
   "litellm": {
