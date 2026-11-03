@@ -60,10 +60,6 @@
 # installed dependency contents.
 !/.pi/agent/npm/
 /.pi/agent/npm/*
-!/.pi/agent/npm/package.json
-!/.pi/agent/npm/bun.lock
-!/.pi/agent/npm/patches/
-!/.pi/agent/npm/patches/*.patch
 !/.pi/agent/extensions/
 /.pi/agent/extensions/*
 # Keep personal extension runtime policy in dotfiles; source is installed from
