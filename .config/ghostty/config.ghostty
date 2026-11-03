@@ -2,7 +2,7 @@ font-family = MesloLGL Nerd Font
 font-size = 20
 background-opacity = 0.9
 
-scrollback-limit-lines = 12000
+scrollback-limit = 10000000
 
 keybind = ctrl+minus=decrease_font_size:1
 keybind = ctrl+equal=increase_font_size:1
