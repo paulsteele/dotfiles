@@ -2,6 +2,10 @@ local M = {}
 local PREFIX = "pi-desktop-notify:"
 local RETIRE_INTERVAL_SECONDS = 0.1
 local RETIRE_MAX_ATTEMPTS = 100
+local SUPPORTED_TERMINAL_BUNDLES = {
+  ["org.alacritty"] = true,
+  ["com.mitchellh.ghostty"] = true,
+}
 
 -- A slot is the independently managed notification stream for one terminal
 -- window. A record remains retained until its exact delivered notification has
@@ -224,12 +228,27 @@ end
 function M.resolve(markerBase64)
   local marker = decode(markerBase64)
   if not marker or marker == "" then return result(false, { error = "invalid_marker" }) end
-  local window = hs.window.get(marker)
-  if not window then return result(false, { error = "window_not_found" }) end
-  local app = window:application()
-  if not app or app:bundleID() ~= "org.alacritty" then
-    return result(false, { error = "window_not_alacritty" })
+  local matches = {}
+  local candidates = {}
+  for _, app in ipairs(hs.application.runningApplications()) do
+    local bundleId = app:bundleID()
+    if SUPPORTED_TERMINAL_BUNDLES[bundleId] then
+      for _, candidate in ipairs(app:allWindows()) do
+        local title = candidate:title() or ""
+        candidates[#candidates + 1] = { bundleId = bundleId, title = title:sub(1, 160) }
+        if title:find(marker, 1, true) then
+          matches[#matches + 1] = candidate
+        end
+      end
+    end
   end
+  if #matches == 0 then
+    return result(false, { error = "window_marker_not_found", candidates = candidates })
+  end
+  if #matches > 1 then
+    return result(false, { error = "window_marker_ambiguous", candidates = candidates })
+  end
+  local window = matches[1]
   local windowId = window:id()
   if not validWindowId(windowId) then return result(false, { error = "invalid_window_id" }) end
   windowRefs[windowId] = window
