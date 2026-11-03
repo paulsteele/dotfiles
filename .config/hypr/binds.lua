@@ -1,7 +1,7 @@
 -- Keybinds and mouse binds.
 
 local mainMod = "ALT"
-local terminal = "alacritty"
+local terminal = "ghostty"
 local menu = "rofi -show run"
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
