@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.4.0",
+  "lastChangelogVersion": "1.3.0",
   "defaultProvider": "litellm",
   "defaultModel": "amod-gpt-6.1-sol",
   "defaultThinkingLevel": "high",
@@ -18,9 +18,10 @@
   "packages": [
     "npm:pi-llama-cpp",
     "npm:pi-web-access",
+    "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-provider-litellm@2.1.0",
-    "git:git@github.com:paulsteele/personal-pi.git"
+    "https://github.com/paulsteele/personal-pi"
   ],
   "theme": "aura",
   "npmCommand": [
