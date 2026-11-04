@@ -1,0 +1,5 @@
+# Pi supplies its host APIs through the extension loader.
+# Installing physical peer copies here lets compiled ESM extensions bypass
+# that mapping and can silently drop tools/system instructions after upgrades.
+[install]
+peer = false

@@ -56,12 +56,13 @@
 !/.pi/agent/themes/
 /.pi/agent/themes/*
 !/.pi/agent/themes/aura.json
-# Track reproducible extension dependencies and local Bun patches, but never
-# installed dependency contents.
+# Track reproducible extension dependencies, Bun peer policy, and local patches,
+# but never installed dependency contents.
 !/.pi/agent/npm/
 /.pi/agent/npm/*
 !/.pi/agent/npm/package.json
 !/.pi/agent/npm/bun.lock
+!/.pi/agent/npm/bunfig.toml
 !/.pi/agent/npm/patches/
 !/.pi/agent/npm/patches/*.patch
 !/.pi/agent/extensions/

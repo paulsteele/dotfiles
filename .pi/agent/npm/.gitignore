@@ -2,5 +2,6 @@
 !.gitignore
 !package.json
 !bun.lock
+!bunfig.toml
 !patches/
 !patches/*.patch

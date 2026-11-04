@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.3.0",
+  "lastChangelogVersion": "1.5.0",
   "defaultProvider": "litellm",
   "defaultModel": "amod-gpt-6.1-sol",
   "defaultThinkingLevel": "high",
@@ -18,7 +18,6 @@
   "packages": [
     "npm:pi-llama-cpp",
     "npm:pi-web-access",
-    "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-provider-litellm@2.1.0",
     "ssh://github.com-personal/paulsteele/personal-pi"
@@ -26,5 +25,8 @@
   "theme": "aura",
   "npmCommand": [
     "bun"
-  ]
+  ],
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.46.0"
+  }
 }
