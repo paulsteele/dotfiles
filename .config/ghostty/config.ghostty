@@ -1,6 +1,7 @@
 font-family = MesloLGL Nerd Font
 font-size = 20
 background-opacity = 0.9
+quit-after-last-window-closed = true
 
 scrollback-limit = 10000000
 
