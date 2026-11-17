@@ -5,7 +5,7 @@
     "@juicesharp/rpiv-ask-user-question": "^2.15.0",
     "pi-llama-cpp": "^0.21.0",
     "pi-provider-litellm": "2.1.0",
-    "pi-web-access": "^0.46.0"
+    "pi-web-access": "^0.47.0"
   },
   "patchedDependencies": {
     "pi-provider-litellm@2.1.0": "patches/pi-provider-litellm@2.1.0.patch"

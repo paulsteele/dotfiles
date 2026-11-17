@@ -8,7 +8,7 @@
         "@juicesharp/rpiv-ask-user-question": "^2.15.0",
         "pi-llama-cpp": "^0.21.0",
         "pi-provider-litellm": "2.1.0",
-        "pi-web-access": "^0.46.0",
+        "pi-web-access": "^0.47.0",
       },
     },
   },
@@ -516,7 +516,7 @@
 
     "pi-provider-litellm": ["pi-provider-litellm@2.1.0", "", { "peerDependencies": { "@earendil-works/pi-ai": ">=0.81.0", "@earendil-works/pi-coding-agent": ">=0.81.0" }, "optionalPeers": ["@earendil-works/pi-ai", "@earendil-works/pi-coding-agent"] }, "sha512-BRsXajpPkpHgTVE6+5rMV5Cg+tntsJ7HuPN66YaCzwmIFCrcKgnhefjZyGga9Fg8f7rUxb387H1Hy1A6wYiCHw=="],
 
-    "pi-web-access": ["pi-web-access@0.46.0", "", { "dependencies": { "@modelcontextprotocol/sdk": "1.32.1", "@mozilla/readability": "^0.6.0", "defuddle": "0.19.3", "linkedom": "^0.16.0", "p-limit": "^6.1.0", "promise.try": "^2.0.1", "turndown": "^7.2.0", "undici": "^8.11.2", "unpdf": "^1.6.2" }, "peerDependencies": { "@earendil-works/pi-ai": "*", "@earendil-works/pi-coding-agent": "*", "@earendil-works/pi-tui": "*", "typebox": "*" }, "optionalPeers": ["@earendil-works/pi-ai", "@earendil-works/pi-coding-agent", "@earendil-works/pi-tui"], "bin": { "pi-web-access-mcp": "dist/mcp-cli.js" } }, "sha512-UfeJKU0TPmQU/3hmfAC5Ot/e5Ib0uHkg2+VHM7Ae4kVilLZf7ocGqHFzBzOkYuGLZ87LobzkrhwTAq8lO/N7cQ=="],
+    "pi-web-access": ["pi-web-access@0.47.0", "", { "dependencies": { "@modelcontextprotocol/sdk": "1.32.1", "@mozilla/readability": "^0.6.0", "defuddle": "0.19.3", "linkedom": "^0.16.0", "p-limit": "^6.1.0", "promise.try": "^2.0.1", "turndown": "^7.2.0", "undici": "^8.11.2", "unpdf": "^1.6.2" }, "peerDependencies": { "@earendil-works/pi-ai": "*", "@earendil-works/pi-coding-agent": "*", "@earendil-works/pi-tui": "*", "typebox": "*" }, "optionalPeers": ["@earendil-works/pi-ai", "@earendil-works/pi-coding-agent", "@earendil-works/pi-tui"], "bin": { "pi-web-access-mcp": "dist/mcp-cli.js" } }, "sha512-Z176wTJjHw9Y+NpZ3WxOmKnh/7Sy3mu4QR05nBS/v6GRd5Cp7g5GnLIzI9LOT1IdR1105qXFS+L3LBUfkOMy8g=="],
 
     "pkce-challenge": ["pkce-challenge@5.0.1", "", {}, "sha512-wQ0b/W4Fr01qtpHlqSqspcj3EhBvimsdh0KlHhH8HRZnMsEa0ea2fTULOXOS9ccQr3om+GcGRk4e+isrZWV8qQ=="],
 
