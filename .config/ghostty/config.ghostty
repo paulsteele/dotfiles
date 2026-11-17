@@ -3,6 +3,9 @@ font-size = 20
 background-opacity = 0.9
 quit-after-last-window-closed = true
 
+working-directory = home
+window-inherit-working-directory = false
+
 scrollback-limit = 10000000
 
 keybind = ctrl+minus=decrease_font_size:1
