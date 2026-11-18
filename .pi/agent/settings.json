@@ -20,7 +20,7 @@
     "npm:pi-web-access",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-provider-litellm@2.1.0",
-    "ssh://github.com-personal/paulsteele/personal-pi"
+    "ssh://github.com/paulsteele/personal-pi"
   ],
   "theme": "aura",
   "npmCommand": [
